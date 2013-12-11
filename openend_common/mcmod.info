@@ -1,0 +1,17 @@
+[
+{
+  "modid": "OpenEnd",
+  "name": "Open End",
+  "version": "@VERSION@",
+  "mcversion": "@MC_VERSION@",
+  "description": "Expanding the gameplay options for The End with villages, blocks, lore, and more!!",
+  "credits": "Created by KharonAlpua and nekosune",
+  "updateUrl": "",
+  "authors": [ "nekosune", "KharonAlpua" ],
+  "parent":"",
+  "screenshots": [],
+  "dependencies": [
+     "mod_MinecraftForge"
+  ]
+}
+]
