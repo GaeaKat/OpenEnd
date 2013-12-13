@@ -1,6 +1,5 @@
 package com.newgaea.openEnd.Blocks;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
 public class DEndBrickBlock extends EndBrickBlock {

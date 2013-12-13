@@ -14,6 +14,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.Configuration;
 import net.minecraftforge.common.MinecraftForge;
 
+import com.newgaea.openEnd.Blocks.DEndBrickBlock;
 import com.newgaea.openEnd.Blocks.DEndStoneBlock;
 import com.newgaea.openEnd.Blocks.EndBrickBlock;
 import com.newgaea.openEnd.lib.Reference;
@@ -63,6 +64,7 @@ public class OpenEndMod {
 	};
 	public static Block DEndStone;
 	public static Block EndBricks;
+	public static Block DEndBricks;
 	public void InitBlocks()
 	{
 		DEndStone=new DEndStoneBlock(Configs.DarkEndStoneId, Material.rock).setHardness(3.0F).setResistance(15.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("darkEndStone").setCreativeTab(tabOpenEndBlocks);
@@ -70,13 +72,21 @@ public class OpenEndMod {
 		LanguageRegistry.addName(DEndStone, "Dark End Stone");
 		MinecraftForge.setBlockHarvestLevel(DEndStone, "pick", 0);
 		
-		EndBricks=new EndBrickBlock(Configs.EndBrickId, Material.rock).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("endbricksmooth").setCreativeTab(tabOpenEndBlocks);
+		EndBricks=new EndBrickBlock(Configs.EndBrickId, Material.rock).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("endbrick").setCreativeTab(tabOpenEndBlocks);
 		GameRegistry.registerBlock(EndBricks, ItemMultiBrickBlock.class,"Endbricks");
-		LanguageRegistry.instance().addStringLocalization("tile.endbricksmooth.default.name","en_US", "Smooth Endstone Brick");
-		LanguageRegistry.instance().addStringLocalization("tile.endbricksmooth.mossy.name","en_US", "Mossy Endstone Brick");
-		LanguageRegistry.instance().addStringLocalization("tile.endbricksmooth.cracked.name","en_US", "Cracked Endstone Brick");
-		LanguageRegistry.instance().addStringLocalization("tile.endbricksmooth.chiseled.name","en_US", "Chisled Endstone Brick");
-
+		LanguageRegistry.instance().addStringLocalization("tile.endbrick.default.name","en_US", "Smooth Endstone Brick");
+		LanguageRegistry.instance().addStringLocalization("tile.endbrick.mossy.name","en_US", "Mossy Endstone Brick");
+		LanguageRegistry.instance().addStringLocalization("tile.endbrick.cracked.name","en_US", "Cracked Endstone Brick");
+		LanguageRegistry.instance().addStringLocalization("tile.endbrick.chiseled.name","en_US", "Chisled Endstone Brick");
+		MinecraftForge.setBlockHarvestLevel(EndBricks, "pick", 0);
+		
+		DEndBricks=new DEndBrickBlock(Configs.DarkEndBrickId, Material.rock).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("darkendbrick").setCreativeTab(tabOpenEndBlocks);
+		GameRegistry.registerBlock(DEndBricks, ItemMultiDBrickBlock.class,"DarkEndBricks");
+		LanguageRegistry.instance().addStringLocalization("tile.darkendbrick.default.name","en_US", "Smooth Dark Endstone Brick");
+		LanguageRegistry.instance().addStringLocalization("tile.darkendbrick.mossy.name","en_US", "Mossy Dark Endstone Brick");
+		LanguageRegistry.instance().addStringLocalization("tile.darkendbrick.cracked.name","en_US", "Cracked Dark Endstone Brick");
+		LanguageRegistry.instance().addStringLocalization("tile.darkendbrick.chiseled.name","en_US", "Chisled Dark Endstone Brick");
+		MinecraftForge.setBlockHarvestLevel(DEndBricks, "pick", 0);
 	}
 	
 	@EventHandler
