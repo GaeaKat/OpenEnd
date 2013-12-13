@@ -105,7 +105,7 @@ public class OpenEndMod {
 		MinecraftForge.setBlockHarvestLevel(ScorchedWood, "axe", 0);
 		OreDictionary.registerOre("plankWood", ScorchedWood);
 		
-		
+		GameRegistry.addShapelessRecipe(new ItemStack(ScorchedWood, 4),new ItemStack(ScorchedLog));
 	}
 	
 	@EventHandler
