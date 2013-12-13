@@ -20,6 +20,7 @@ import com.newgaea.openEnd.Blocks.DEndStoneBlock;
 import com.newgaea.openEnd.Blocks.EndBrickBlock;
 import com.newgaea.openEnd.Blocks.ScorchedLogBlock;
 import com.newgaea.openEnd.Blocks.ScorchedWoodBlock;
+import com.newgaea.openEnd.items.ItemSchematicPlacer;
 import com.newgaea.openEnd.lib.Reference;
 
 import cpw.mods.fml.common.Mod;
@@ -65,6 +66,14 @@ public class OpenEndMod {
 			return new ItemStack(Block.whiteStone);
 		}
 	};
+	public static CreativeTabs tabOpenEndItems=new CreativeTabs("tabOpenEndItems")
+	{
+		@Override
+		public ItemStack getIconItemStack()
+		{
+			return new ItemStack(Item.enderPearl);
+		}
+	};
 	public static Block DEndStone;
 	public static Block EndBricks;
 	public static Block DEndBricks;
@@ -108,12 +117,22 @@ public class OpenEndMod {
 		GameRegistry.addShapelessRecipe(new ItemStack(ScorchedWood, 4),new ItemStack(ScorchedLog));
 	}
 	
+	
+	
+	public static Item testSchematicPlacer;
+	public void InitItems()
+	{
+		testSchematicPlacer=new ItemSchematicPlacer(Configs.schematicPlacer).setCreativeTab(tabOpenEndItems);
+		GameRegistry.registerItem(testSchematicPlacer, "TestSchematicPlacer");
+	}
 	@EventHandler
 	public void Init(FMLInitializationEvent event)
 	{
 		LanguageRegistry.instance().addStringLocalization("itemGroup.tabOpenEndBlocks", "en_US","Open End Blocks");
 		InitBlocks();
-	}
+		LanguageRegistry.instance().addStringLocalization("itemGroup.tabOpenEnditems", "en_US","Open End Items");
+		InitItems();
+	}	
 	
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event)

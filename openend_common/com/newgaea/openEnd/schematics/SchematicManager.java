@@ -23,10 +23,14 @@ public class SchematicManager {
 			NBTTagCompound comp=CompressedStreamTools.readCompressed(is);
 			schematic=Schematic.loadSchematic(comp,world);
 		}
-		catch(IOException e)
+		catch(Exception e)
 		{
 			OpenEndMod.logger.severe(e.toString());
 		}
 		return schematic;
 	}
+	
+	
+	
+	public static void Place
 }
