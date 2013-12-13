@@ -22,7 +22,8 @@ public class Configs {
 	public static @CfgBool(comment="This setting controls whether the mod adds any world gen, recommended on!") boolean worldgen=true;
 	
 	public static @CfgId(block=true,comment="Block ID for Dark End Stone") int DarkEndStoneId=500;
-	public static @CfgId(block=true,comment="Block ID for End Bricks") int EndBrickId=501;
+	public static @CfgId(block=true,comment="Block ID for End Stone Bricks") int EndBrickId=501;
+	public static @CfgId(block=true,comment="Block ID for Dark End Stone Bricks") int DarkEndBrickId=502;
 	
 	public static void load(Configuration config)
 	{

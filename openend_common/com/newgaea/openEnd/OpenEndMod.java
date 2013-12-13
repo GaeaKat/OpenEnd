@@ -9,6 +9,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemMultiTextureTile;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.Configuration;
 import net.minecraftforge.common.MinecraftForge;
@@ -70,8 +71,11 @@ public class OpenEndMod {
 		MinecraftForge.setBlockHarvestLevel(DEndStone, "pick", 0);
 		
 		EndBricks=new EndBrickBlock(Configs.EndBrickId, Material.rock).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("endbricksmooth").setCreativeTab(tabOpenEndBlocks);
-		GameRegistry.registerBlock(EndBricks, "EndBricks");
-		int i;
+		GameRegistry.registerBlock(EndBricks, ItemMultiBrickBlock.class,"Endbricks");
+		LanguageRegistry.instance().addStringLocalization("tile.endbricksmooth.default.name","en_US", "Smooth Endstone Brick");
+		LanguageRegistry.instance().addStringLocalization("tile.endbricksmooth.mossy.name","en_US", "Mossy Endstone Brick");
+		LanguageRegistry.instance().addStringLocalization("tile.endbricksmooth.cracked.name","en_US", "Cracked Endstone Brick");
+		LanguageRegistry.instance().addStringLocalization("tile.endbricksmooth.chiseled.name","en_US", "Chisled Endstone Brick");
 
 	}
 	
