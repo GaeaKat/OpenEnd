@@ -1,0 +1,39 @@
+/**
+ * 
+ */
+package com.newgaea.openEnd.Blocks;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.util.Icon;
+
+/**
+ * @author Katrina
+ *
+ */
+public class EndBrickBlock extends Block {
+
+	public static final String[] END_BRICK_TYPES = new String[] {"default", "mossy", "cracked", "chiseled"};
+    public static final String[] END_BRICK_TEXTURE_NAMES = new String[] {null, "mossy", "cracked", "carved"};
+    @SideOnly(Side.CLIENT)
+    private Icon[] end_brick_icons;
+	public EndBrickBlock(int par1, Material par2Material) {
+		super(par1, par2Material);
+		
+	}
+
+	
+	@SideOnly(Side.CLIENT)
+	@Override
+	public Icon getIcon(int par1, int par2)
+    {
+        if (par2 < 0 || par2 >= END_BRICK_TEXTURE_NAMES.length)
+        {
+            par2 = 0;
+        }
+
+        return this.end_brick_icons[par2];
+    }
+}

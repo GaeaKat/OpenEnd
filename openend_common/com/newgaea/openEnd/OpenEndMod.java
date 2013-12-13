@@ -14,6 +14,7 @@ import net.minecraftforge.common.Configuration;
 import net.minecraftforge.common.MinecraftForge;
 
 import com.newgaea.openEnd.Blocks.DEndStoneBlock;
+import com.newgaea.openEnd.Blocks.EndBrickBlock;
 import com.newgaea.openEnd.lib.Reference;
 
 import cpw.mods.fml.common.Mod;
@@ -56,16 +57,19 @@ public class OpenEndMod {
 		@Override
 		public ItemStack getIconItemStack()
 		{
-			return new ItemStack(Item.enderPearl);
+			return new ItemStack(Block.whiteStone);
 		}
 	};
 	public static Block DEndStone;
+	public static Block EndBricks;
 	public void InitBlocks()
 	{
 		DEndStone=new DEndStoneBlock(Configs.DarkEndStoneId, Material.rock).setHardness(3.0F).setResistance(15.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("darkEndStone").setCreativeTab(tabOpenEndBlocks);
 		GameRegistry.registerBlock(DEndStone,"DEndStone");
 		LanguageRegistry.addName(DEndStone, "Dark End Stone");
 		MinecraftForge.setBlockHarvestLevel(DEndStone, "pick", 0);
+		
+		EndBricks=new EndBrickBlock(Configs.EndBrickId, Material.rock).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("endbricksmooth").setCreativeTab(tabOpenEndBlocks);
 	}
 	
 	@EventHandler
