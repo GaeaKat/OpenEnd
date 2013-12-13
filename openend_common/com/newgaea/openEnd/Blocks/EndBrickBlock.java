@@ -3,10 +3,15 @@
  */
 package com.newgaea.openEnd.Blocks;
 
+import java.util.List;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 
 /**
@@ -35,5 +40,43 @@ public class EndBrickBlock extends Block {
         }
 
         return this.end_brick_icons[par2];
+    }
+	
+	
+	
+	
+	@Override
+	public int damageDropped(int par1)
+    {
+        return par1;
+    }
+	
+	@SuppressWarnings("unchecked")
+	@SideOnly(Side.CLIENT)
+	public void getSubBlocks(int par1, CreativeTabs par2CreativeTabs, @SuppressWarnings("rawtypes") List par3List)
+    {
+        for (int j = 0; j < END_BRICK_TYPES.length; ++j)
+        {
+            par3List.add(new ItemStack(par1, 1, j));
+        }
+    }
+	
+	@SideOnly(Side.CLIENT)
+	@Override
+	public void registerIcons(IconRegister par1IconRegister)
+    {
+        this.end_brick_icons = new Icon[END_BRICK_TEXTURE_NAMES.length];
+
+        for (int i = 0; i < this.end_brick_icons.length; ++i)
+        {
+            String s = this.getTextureName();
+
+            if (END_BRICK_TEXTURE_NAMES[i] != null)
+            {
+                s = s + "_" + END_BRICK_TEXTURE_NAMES[i];
+            }
+
+            this.end_brick_icons[i] = par1IconRegister.registerIcon(s);
+        }
     }
 }

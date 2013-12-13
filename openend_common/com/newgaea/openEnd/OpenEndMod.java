@@ -70,6 +70,9 @@ public class OpenEndMod {
 		MinecraftForge.setBlockHarvestLevel(DEndStone, "pick", 0);
 		
 		EndBricks=new EndBrickBlock(Configs.EndBrickId, Material.rock).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("endbricksmooth").setCreativeTab(tabOpenEndBlocks);
+		GameRegistry.registerBlock(EndBricks, "EndBricks");
+		int i;
+
 	}
 	
 	@EventHandler
