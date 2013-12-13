@@ -13,10 +13,13 @@ import net.minecraft.item.ItemMultiTextureTile;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.Configuration;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.oredict.OreDictionary;
 
 import com.newgaea.openEnd.Blocks.DEndBrickBlock;
 import com.newgaea.openEnd.Blocks.DEndStoneBlock;
 import com.newgaea.openEnd.Blocks.EndBrickBlock;
+import com.newgaea.openEnd.Blocks.ScorchedLogBlock;
+import com.newgaea.openEnd.Blocks.ScorchedWoodBlock;
 import com.newgaea.openEnd.lib.Reference;
 
 import cpw.mods.fml.common.Mod;
@@ -65,6 +68,8 @@ public class OpenEndMod {
 	public static Block DEndStone;
 	public static Block EndBricks;
 	public static Block DEndBricks;
+	public static Block ScorchedLog;
+	public static Block ScorchedWood;
 	public void InitBlocks()
 	{
 		DEndStone=new DEndStoneBlock(Configs.DarkEndStoneId, Material.rock).setHardness(3.0F).setResistance(15.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("darkEndStone").setCreativeTab(tabOpenEndBlocks);
@@ -87,6 +92,20 @@ public class OpenEndMod {
 		LanguageRegistry.instance().addStringLocalization("tile.darkendbrick.cracked.name","en_US", "Cracked Dark Endstone Brick");
 		LanguageRegistry.instance().addStringLocalization("tile.darkendbrick.chiseled.name","en_US", "Chisled Dark Endstone Brick");
 		MinecraftForge.setBlockHarvestLevel(DEndBricks, "pick", 0);
+		
+		ScorchedLog=new ScorchedLogBlock(Configs.ScorchedLogId).setHardness(2.0F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("scorchedLog").setCreativeTab(tabOpenEndBlocks);
+		GameRegistry.registerBlock(ScorchedLog,"ScorchedLog");
+		LanguageRegistry.addName(ScorchedLog, "Scorched Log");
+		MinecraftForge.setBlockHarvestLevel(ScorchedLog, "axe", 0);
+		OreDictionary.registerOre("logWood", ScorchedLog);
+		
+		ScorchedWood=new ScorchedWoodBlock(Configs.ScorchedPlankId).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("ScorchedWood").setCreativeTab(tabOpenEndBlocks);
+		GameRegistry.registerBlock(ScorchedWood,"ScorchedWood");
+		LanguageRegistry.addName(ScorchedWood, "Scorched Wood");
+		MinecraftForge.setBlockHarvestLevel(ScorchedWood, "axe", 0);
+		OreDictionary.registerOre("plankWood", ScorchedWood);
+		
+		
 	}
 	
 	@EventHandler
