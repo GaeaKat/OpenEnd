@@ -7,7 +7,11 @@ import java.util.logging.Logger;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.Configuration;
+import net.minecraftforge.common.MinecraftForge;
 
 import com.newgaea.openEnd.Blocks.DEndStoneBlock;
 import com.newgaea.openEnd.lib.Reference;
@@ -20,6 +24,8 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
 
 /**
  * @author Katrina
@@ -45,16 +51,28 @@ public class OpenEndMod {
 		
 		Configs.load(new Configuration(event.getSuggestedConfigurationFile()));
 	}
+	public static CreativeTabs tabOpenEndBlocks=new CreativeTabs("tabOpenEndBlocks")
+	{
+		@Override
+		public ItemStack getIconItemStack()
+		{
+			return new ItemStack(Item.enderPearl);
+		}
+	};
 	public static Block DEndStone;
 	public void InitBlocks()
 	{
-		DEndStone=new DEndStoneBlock(Configs.DarkEndStoneId, Material.rock)
+		DEndStone=new DEndStoneBlock(Configs.DarkEndStoneId, Material.rock).setHardness(3.0F).setResistance(15.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("darkEndStone").setCreativeTab(tabOpenEndBlocks);
+		GameRegistry.registerBlock(DEndStone,"DEndStone");
+		LanguageRegistry.addName(DEndStone, "Dark End Stone");
+		MinecraftForge.setBlockHarvestLevel(DEndStone, "pick", 0);
 	}
 	
 	@EventHandler
 	public void Init(FMLInitializationEvent event)
 	{
-		
+		LanguageRegistry.instance().addStringLocalization("itemGroup.tabOpenEndBlocks", "en_US","Open End Blocks");
+		InitBlocks();
 	}
 	
 	@EventHandler
