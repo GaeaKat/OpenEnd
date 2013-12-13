@@ -1,6 +1,13 @@
 package com.newgaea.openEnd.schematics;
 
+import java.util.LinkedList;
+import java.util.List;
+
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityList;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 public class Schematic {
@@ -68,7 +75,29 @@ public class Schematic {
 	private byte[] addBlockId;
 	short[] blocks;
 	
-	public Schematic loadSchematic(NBTTagCompound nbtSchematic,World world)
+	
+	private List<Entity> entities;
+	public List<Entity> getEntities() {
+		return entities;
+	}
+	public void setEntities(List<Entity> entities) {
+		this.entities = entities;
+	}
+	public List<TileEntity> getTileEntities() {
+		return tileEntities;
+	}
+	public void setTileEntities(List<TileEntity> tileEntities) {
+		this.tileEntities = tileEntities;
+	}
+	private List<TileEntity> tileEntities;
+	public Schematic()
+	{
+		entities=new LinkedList<Entity>();
+		tileEntities=new LinkedList<TileEntity>();
+	}
+	
+	
+	public static Schematic loadSchematic(NBTTagCompound nbtSchematic,World world)
 	{
 		Schematic schematic=new Schematic();
 		schematic.setHeight(nbtSchematic.getShort("Height"));
@@ -94,10 +123,43 @@ public class Schematic {
 			for(int i=0;i<extraBlocksNibble.length;i++)
 			{
 				extraBlocks[i*2+0]=(byte)((extraBlocksNibble[i]>>4) & 0xF);
+				extraBlocks[i*2+1]=(byte)(extraBlocksNibble[i]&0xF);
 			}
+			
+		}
+		else if(nbtSchematic.hasKey("Add"))
+		{
+			extraBlocks=nbtSchematic.getByteArray("Add");
 		}
 		
 		
+		for(int i=0;i<schematic.rawBlocks.length;i++)
+		{
+			schematic.blocks[i]=(short)(schematic.rawBlocks[i]& 0xFF);
+			if(extra)
+				schematic.blocks[i]|=((extraBlocks[i]) & 0xFF) << 8;
+		}
+		
+		schematic.setBlockData(nbtSchematic.getByteArray("Data"));
+		List<Entity> ents=new LinkedList<Entity>();
+		NBTTagList entities=nbtSchematic.getTagList("Entities");
+		for(int i=0;i<entities.tagCount();i++)
+		{
+			NBTTagCompound entity=(NBTTagCompound) entities.tagAt(i);
+			Entity entEntity=EntityList.createEntityFromNBT(entity, world);
+			ents.add(entEntity);
+		}
+		schematic.setEntities(ents);
+		
+		List<TileEntity> tiles=new LinkedList<TileEntity>();
+		NBTTagList tileEntities=nbtSchematic.getTagList("TileEntities");
+		for(int i=0;i<tileEntities.tagCount();i++)
+		{
+			NBTTagCompound tile=(NBTTagCompound)tileEntities.tagAt(i);
+			TileEntity tileEnt=TileEntity.createAndLoadEntity(tile);
+			tiles.add(tileEnt);
+		}
+		schematic.setTileEntities(tiles);
 		return schematic;
 	}
 	
