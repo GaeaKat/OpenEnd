@@ -5,6 +5,11 @@ package com.newgaea.openEnd;
 
 import java.util.logging.Logger;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraftforge.common.Configuration;
+
+import com.newgaea.openEnd.Blocks.DEndStoneBlock;
 import com.newgaea.openEnd.lib.Reference;
 
 import cpw.mods.fml.common.Mod;
@@ -36,9 +41,15 @@ public class OpenEndMod {
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
+		logger=event.getModLog();
 		
+		Configs.load(new Configuration(event.getSuggestedConfigurationFile()));
 	}
-	
+	public static Block DEndStone;
+	public void InitBlocks()
+	{
+		DEndStone=new DEndStoneBlock(Configs.DarkEndStoneId, Material.rock)
+	}
 	
 	@EventHandler
 	public void Init(FMLInitializationEvent event)

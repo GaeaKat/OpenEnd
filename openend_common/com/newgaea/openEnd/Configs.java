@@ -19,9 +19,9 @@ public class Configs {
 	
 	
 	
+	public static @CfgBool(comment="This setting controls whether the mod adds any world gen, recommended on!") boolean worldgen=true;
 	
-	
-	
+	public static @CfgId(block=true,comment="Block ID for Dark End Stone") int DarkEndStoneId=500;
 	
 	public static void load(Configuration config)
 	{
@@ -41,9 +41,26 @@ public class Configs {
 					{
 						id=config.getItem(field.getName(), id, annotation.comment()).getInt();
 					}
-					
+					field.setInt(null, id);
+				}
+				else
+				{
+					if(field.isAnnotationPresent(CfgBool.class))
+					{
+						CfgBool bAnnotation=field.getAnnotation(CfgBool.class);
+						boolean bool=field.getBoolean(null);
+						bool=config.get(Configuration.CATEGORY_GENERAL, field.getName(), bool,bAnnotation.comment()).getBoolean(bool);
+						field.setBoolean(null, bool);
+					}
 				}
 			}
+		} catch (Exception e)
+		{
+			// Failed, throw somethign here later
+		}
+		finally
+		{
+			config.save();
 		}
 	}
 }
