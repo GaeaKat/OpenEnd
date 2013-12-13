@@ -1,0 +1,32 @@
+﻿Hello everyone!
+
+I am Kharon Alpua (Nathaniel Knight), from Michigan, and
+I am modding with the New Gaea Modteam, composed of myself
+and Nekosune.
+
+Our mod is called Open End, and will add End Villages to the game,
+along with some blocks appropriate for building these villages.
+
+I am primarily responsible for the artistic assets such as block
+textures. We will have a few other assets involved, but I'd like
+to reveal those as we develop them instead of all up front.
+
+For tools, I will be using the following:
+
+	Eclipse (all code involved in my work)
+	Blender (any models and testing of textures)
+	Photoshop & Illustrator (texture work)
+	Notepad++ (all raw text data, like this!)
+	Audacity (if any audio is required)
+	
+I am streaming using OBS, with background music through foobar2000.
+	If you have any questions about my setup or workflow, ask them
+	in the twitch chat and I will do my best to respond in a timely
+	manner.
+	
+Alright.
+I'm back, and I hope this will be a bit less intensive on my processor.
+So to start with, I need to refresh my dev with nekosune's work from earlier today.
+
+13-12-13
+	17:00 - Taking a break from work for supper. Will note when I return.
