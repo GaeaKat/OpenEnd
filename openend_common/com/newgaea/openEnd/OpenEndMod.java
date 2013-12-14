@@ -86,7 +86,7 @@ public class OpenEndMod {
 	public static Block EndBrickStairs;
 	public void InitBlocks()
 	{
-		DEndStone=new DEndStoneBlock(Configs.DarkEndStoneId, Material.rock).setHardness(3.0F).setResistance(15.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("darkEndStone").setCreativeTab(tabOpenEndBlocks).setTextureName("openend:dark_end_stone");;
+		DEndStone=new DEndStoneBlock(Configs.DarkEndStoneId, Material.rock).setHardness(3.0F).setResistance(15.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("darkEndStone").setCreativeTab(tabOpenEndBlocks).setTextureName("openend:dark_end_stone");
 		GameRegistry.registerBlock(DEndStone,"DEndStone");
 		LanguageRegistry.addName(DEndStone, "Dark End Stone");
 		MinecraftForge.setBlockHarvestLevel(DEndStone, "pick", 0);
@@ -107,13 +107,13 @@ public class OpenEndMod {
 		LanguageRegistry.instance().addStringLocalization("tile.darkendbrick.chiseled.name","en_US", "Chisled Dark Endstone Brick");
 		MinecraftForge.setBlockHarvestLevel(DEndBricks, "pick", 0);
 		
-		ScorchedLog=new ScorchedLogBlock(Configs.ScorchedLogId).setHardness(2.0F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("scorchedLog").setCreativeTab(tabOpenEndBlocks);
+		ScorchedLog=new ScorchedLogBlock(Configs.ScorchedLogId).setHardness(2.0F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("scorchedLog").setCreativeTab(tabOpenEndBlocks).setTextureName("openend:scorched_log");
 		GameRegistry.registerBlock(ScorchedLog,"ScorchedLog");
 		LanguageRegistry.addName(ScorchedLog, "Scorched Log");
 		MinecraftForge.setBlockHarvestLevel(ScorchedLog, "axe", 0);
 		OreDictionary.registerOre("logWood", ScorchedLog);
 		
-		ScorchedWood=new ScorchedWoodBlock(Configs.ScorchedPlankId).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("ScorchedWood").setCreativeTab(tabOpenEndBlocks);
+		ScorchedWood=new ScorchedWoodBlock(Configs.ScorchedPlankId).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("ScorchedWood").setCreativeTab(tabOpenEndBlocks).setTextureName("openend:scorched_wood");
 		GameRegistry.registerBlock(ScorchedWood,"ScorchedWood");
 		LanguageRegistry.addName(ScorchedWood, "Scorched Wood");
 		MinecraftForge.setBlockHarvestLevel(ScorchedWood, "axe", 0);
@@ -121,7 +121,7 @@ public class OpenEndMod {
 		
 		GameRegistry.addShapelessRecipe(new ItemStack(ScorchedWood, 4),new ItemStack(ScorchedLog));
 		
-		AlabasterStone=new AlabasterBlock(Configs.AlabasterStoneId).setHardness(50.0F).setResistance(2000.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("alabaster").setCreativeTab(tabOpenEndBlocks);
+		AlabasterStone=new AlabasterBlock(Configs.AlabasterStoneId).setHardness(50.0F).setResistance(2000.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("alabaster").setCreativeTab(tabOpenEndBlocks).setTextureName("openend:alabaster");
 		GameRegistry.registerBlock(AlabasterStone,"alabasterStone");
 		LanguageRegistry.addName(AlabasterStone, "Alabaster");
 		MinecraftForge.setBlockHarvestLevel(AlabasterStone, "pick", 3);
