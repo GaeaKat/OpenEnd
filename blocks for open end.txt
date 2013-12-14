@@ -20,3 +20,9 @@ Scorched Wood
 Scorched Leaves - ashy grey leaves
 
 Alabaster - A white durable stone with properties like Obsidian.
+
+Blocks still needed:
+	End Stone Slabs
+	End Brick Stairs
+	End Brick Slabs
+	Scorched Leaves
