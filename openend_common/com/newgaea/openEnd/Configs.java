@@ -28,6 +28,7 @@ public class Configs {
 	public static @CfgId(block=true,comment="Block ID for Dark End Stone Bricks") int DarkEndBrickId=502;
 	public static @CfgId(block=true,comment="Block ID for Scorched Log") int ScorchedLogId=503;
 	public static @CfgId(block=true,comment="Block ID for Scorched Planks") int ScorchedPlankId=504;
+	public static @CfgId(block=true,comment="Block ID for Alabaster Stone") int AlabasterStoneId=505;
 	
 	// Items!
 	public static @CfgId(block=false,comment="Item ID for the test schematic Placer") int schematicPlacer=2015;

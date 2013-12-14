@@ -15,6 +15,7 @@ import net.minecraftforge.common.Configuration;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.oredict.OreDictionary;
 
+import com.newgaea.openEnd.Blocks.AlabasterBlock;
 import com.newgaea.openEnd.Blocks.DEndBrickBlock;
 import com.newgaea.openEnd.Blocks.DEndStoneBlock;
 import com.newgaea.openEnd.Blocks.EndBrickBlock;
@@ -79,6 +80,7 @@ public class OpenEndMod {
 	public static Block DEndBricks;
 	public static Block ScorchedLog;
 	public static Block ScorchedWood;
+	public static Block AlabasterStone;
 	public void InitBlocks()
 	{
 		DEndStone=new DEndStoneBlock(Configs.DarkEndStoneId, Material.rock).setHardness(3.0F).setResistance(15.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("darkEndStone").setCreativeTab(tabOpenEndBlocks);
@@ -115,6 +117,13 @@ public class OpenEndMod {
 		OreDictionary.registerOre("plankWood", ScorchedWood);
 		
 		GameRegistry.addShapelessRecipe(new ItemStack(ScorchedWood, 4),new ItemStack(ScorchedLog));
+		
+		AlabasterStone=new AlabasterBlock(Configs.AlabasterStoneId).setHardness(50.0F).setResistance(2000.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("alabaster").setCreativeTab(tabOpenEndBlocks);
+		GameRegistry.registerBlock(AlabasterStone,"alabasterStone");
+		LanguageRegistry.addName(AlabasterStone, "Alabaster");
+		MinecraftForge.setBlockHarvestLevel(AlabasterStone, "pick", 3);
+		
+		
 	}
 	
 	
@@ -122,7 +131,7 @@ public class OpenEndMod {
 	public static Item testSchematicPlacer;
 	public void InitItems()
 	{
-		testSchematicPlacer=new ItemSchematicPlacer(Configs.schematicPlacer).setCreativeTab(tabOpenEndItems);
+		testSchematicPlacer=new ItemSchematicPlacer(Configs.schematicPlacer).setCreativeTab(tabOpenEndItems).setUnlocalizedName("schematicPlacer");
 		GameRegistry.registerItem(testSchematicPlacer, "TestSchematicPlacer");
 	}
 	@EventHandler
@@ -130,7 +139,7 @@ public class OpenEndMod {
 	{
 		LanguageRegistry.instance().addStringLocalization("itemGroup.tabOpenEndBlocks", "en_US","Open End Blocks");
 		InitBlocks();
-		LanguageRegistry.instance().addStringLocalization("itemGroup.tabOpenEnditems", "en_US","Open End Items");
+		LanguageRegistry.instance().addStringLocalization("itemGroup.tabOpenEndItems", "en_US","Open End Items");
 		InitItems();
 	}	
 	
