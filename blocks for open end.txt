@@ -1,0 +1,22 @@
+﻿List of Blocks for OpenEnd:
+
+Dark End Stone - blue-ish; inverted colors from normal end stone (unique texture)
+
+All further "end stone" blocks have dark and light variants
+	Smooth End Stone - vertical stripes running through blocks.
+	End Stone Bricks - stone brick style of texture
+	Cracked End Stone Bricks - As above, but with cracks in them
+	Mossy End Stone Bricks - As end stone bricks, but with moss on them.
+	Chiseled End Stone - Two variants
+		Runic Chisel - Has simple rune-like marks
+		Face Chisel - Has a face in the middle of the block
+		The top and bottom of chiseled should use the smooth stone texture
+	End Stone Stairs & Slabs - For architecture, made from default end stone
+		and dark end stone
+	End Brick Stairs and Slabs - like above, but using brick textures
+	
+Scorched Log
+Scorched Wood
+Scorched Leaves - ashy grey leaves
+
+Alabaster - A white durable stone with properties like Obsidian.
