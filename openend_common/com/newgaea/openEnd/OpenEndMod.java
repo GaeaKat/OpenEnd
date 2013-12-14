@@ -6,6 +6,7 @@ package com.newgaea.openEnd;
 import java.util.logging.Logger;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockStairs;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -81,6 +82,7 @@ public class OpenEndMod {
 	public static Block ScorchedLog;
 	public static Block ScorchedWood;
 	public static Block AlabasterStone;
+	public static Block EndBrickStairs;
 	public void InitBlocks()
 	{
 		DEndStone=new DEndStoneBlock(Configs.DarkEndStoneId, Material.rock).setHardness(3.0F).setResistance(15.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("darkEndStone").setCreativeTab(tabOpenEndBlocks);
@@ -122,7 +124,9 @@ public class OpenEndMod {
 		GameRegistry.registerBlock(AlabasterStone,"alabasterStone");
 		LanguageRegistry.addName(AlabasterStone, "Alabaster");
 		MinecraftForge.setBlockHarvestLevel(AlabasterStone, "pick", 3);
-		
+		EndBrickStairs=new BlockStairs(506,EndBricks,1).setCreativeTab(tabOpenEndBlocks).setUnlocalizedName("endSteps");
+		GameRegistry.registerBlock(EndBrickStairs,"EndBrickStairs");
+		LanguageRegistry.addName(EndBrickStairs, "End Brick Stairs");
 		
 	}
 	
