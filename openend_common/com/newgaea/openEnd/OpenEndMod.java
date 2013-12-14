@@ -20,6 +20,7 @@ import com.newgaea.openEnd.Blocks.AlabasterBlock;
 import com.newgaea.openEnd.Blocks.DEndBrickBlock;
 import com.newgaea.openEnd.Blocks.DEndStoneBlock;
 import com.newgaea.openEnd.Blocks.EndBrickBlock;
+import com.newgaea.openEnd.Blocks.OEBlockStairs;
 import com.newgaea.openEnd.Blocks.ScorchedLogBlock;
 import com.newgaea.openEnd.Blocks.ScorchedWoodBlock;
 import com.newgaea.openEnd.items.ItemSchematicPlacer;
@@ -85,7 +86,7 @@ public class OpenEndMod {
 	public static Block EndBrickStairs;
 	public void InitBlocks()
 	{
-		DEndStone=new DEndStoneBlock(Configs.DarkEndStoneId, Material.rock).setHardness(3.0F).setResistance(15.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("darkEndStone").setCreativeTab(tabOpenEndBlocks);
+		DEndStone=new DEndStoneBlock(Configs.DarkEndStoneId, Material.rock).setHardness(3.0F).setResistance(15.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("darkEndStone").setCreativeTab(tabOpenEndBlocks).setTextureName("openend:dark_end_stone");;
 		GameRegistry.registerBlock(DEndStone,"DEndStone");
 		LanguageRegistry.addName(DEndStone, "Dark End Stone");
 		MinecraftForge.setBlockHarvestLevel(DEndStone, "pick", 0);
@@ -124,7 +125,7 @@ public class OpenEndMod {
 		GameRegistry.registerBlock(AlabasterStone,"alabasterStone");
 		LanguageRegistry.addName(AlabasterStone, "Alabaster");
 		MinecraftForge.setBlockHarvestLevel(AlabasterStone, "pick", 3);
-		EndBrickStairs=new BlockStairs(506,EndBricks,1).setCreativeTab(tabOpenEndBlocks).setUnlocalizedName("endSteps");
+		EndBrickStairs=new OEBlockStairs(506,DEndStone,1).setCreativeTab(tabOpenEndBlocks).setUnlocalizedName("endSteps");
 		GameRegistry.registerBlock(EndBrickStairs,"EndBrickStairs");
 		LanguageRegistry.addName(EndBrickStairs, "End Brick Stairs");
 		
