@@ -16,21 +16,21 @@ public class ReflectClass {
 	
 	public void reflectme()
 	{
-		String[] remaps=remapFieldNames("ChunkProviderEnd", "provideChunk");
-		OpenEndMod.logger.info(remaps.toString());
+		String[] remaps=remapMethodNames("ChunkProviderEnd", "provideChunk");
+		OpenEndMod.logger.info(remaps[0].toString());
 		
 	}
 	
 	
-	public static String[] remapFieldNames(String className, String... fieldNames)
+	public static String[] remapMethodNames(String className, String... methodNames)
     {
         String internalClassName = FMLDeobfuscatingRemapper.INSTANCE.unmap(className.replace('.', '/'));
-        String[] mappedNames = new String[fieldNames.length];
+        String[] mappedNames = new String[methodNames.length];
         int i = 0;
-        for (String fName : fieldNames)
+        for (String mName : methodNames)
         {
             //mappedNames[i++] = FMLDeobfuscatingRemapper.INSTANCE.mapFieldName(internalClassName, fName, null);
-        	mappedNames[i++]=FMLDeobfuscatingRemapper.INSTANCE.mapMethodName(internalClassName,fName , null);
+        	mappedNames[i++]=FMLDeobfuscatingRemapper.INSTANCE.mapMethodName(internalClassName,mName , null);
         }
         return mappedNames;
     }
