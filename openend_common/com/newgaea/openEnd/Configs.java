@@ -29,6 +29,15 @@ public class Configs {
 	public static @CfgId(block=true,comment="Block ID for Scorched Log") int ScorchedLogId=503;
 	public static @CfgId(block=true,comment="Block ID for Scorched Planks") int ScorchedPlankId=504;
 	public static @CfgId(block=true,comment="Block ID for Alabaster Stone") int AlabasterStoneId=505;
+	public static @CfgId(block=true,comment="Block ID for Smooth End Stone") int SmoothEndStoneId=506;
+	public static @CfgId(block=true,comment="Block ID for Dark Smooth End Stone") int DarkSmoothEndStoneId=507;
+	public static @CfgId(block=true,comment="Block ID for Dark End Stone stairs") int DarkEndStoneStairsId=508;
+	public static @CfgId(block=true,comment="Block ID for End Stone stairs") int EndStoneStairsId=509;
+	public static @CfgId(block=true,comment="Block ID for Smooth End Stone stairs") int SmoothEndStoneStairsId=510;
+	public static @CfgId(block=true,comment="Block ID for Scorched Wood stairs") int ScorchedWoodStairsId=511;
+	public static @CfgId(block=true,comment="Block ID for Alabaster stairs") int AlabasterStairsId=512;
+	public static @CfgId(block=true,comment="Block ID for End Brick stairs") int EndBrickStairsId=513;
+	public static @CfgId(block=true,comment="Block ID for Dark End Brick stairs") int DarkEndBrickStairsId=514;
 	
 	// Items!
 	public static @CfgId(block=false,comment="Item ID for the test schematic Placer") int schematicPlacer=2015;

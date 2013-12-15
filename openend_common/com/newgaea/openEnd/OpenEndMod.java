@@ -91,7 +91,7 @@ public class OpenEndMod {
 		LanguageRegistry.addName(DEndStone, "Dark End Stone");
 		MinecraftForge.setBlockHarvestLevel(DEndStone, "pick", 0);
 		
-		EndBricks=new EndBrickBlock(Configs.EndBrickId, Material.rock).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("endbrick").setCreativeTab(tabOpenEndBlocks);
+		EndBricks=new EndBrickBlock(Configs.EndBrickId, Material.rock).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("endbrick").setCreativeTab(tabOpenEndBlocks).setTextureName("openend:end_stone_brick");
 		GameRegistry.registerBlock(EndBricks, ItemMultiBrickBlock.class,"Endbricks");
 		LanguageRegistry.instance().addStringLocalization("tile.endbrick.default.name","en_US", "Smooth Endstone Brick");
 		LanguageRegistry.instance().addStringLocalization("tile.endbrick.mossy.name","en_US", "Mossy Endstone Brick");
