@@ -39,6 +39,12 @@ public class Configs {
 	public static @CfgId(block=true,comment="Block ID for End Brick stairs") int EndBrickStairsId=513;
 	public static @CfgId(block=true,comment="Block ID for Dark End Brick stairs") int DarkEndBrickStairsId=514;
 	public static @CfgId(block=true,comment="Block ID for Dark Smooth End Stone stairs") int DarkSmoothEndStoneStairsId=515;
+	
+	public static @CfgId(block=true,comment="Block ID for End Slabs") int EndSlabsId=515;
+	public static @CfgId(block=true,comment="Block ID for Dark End Slabs") int DarkEndSlabs=516;
+	
+	public static @CfgId(block=true,comment="Block ID for End Double Slabs") int EndDoubleSlabsId=516;
+	public static @CfgId(block=true,comment="Block ID for Dark End Slabs Slabs") int DarkEndDoubleSlabs=517;
 	// Items!
 	public static @CfgId(block=false,comment="Item ID for the test schematic Placer") int schematicPlacer=2015;
 	

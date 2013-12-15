@@ -6,6 +6,7 @@ package com.newgaea.openEnd;
 import java.util.logging.Logger;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockHalfSlab;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -18,6 +19,7 @@ import com.newgaea.openEnd.Blocks.AlabasterBlock;
 import com.newgaea.openEnd.Blocks.DEndBrickBlock;
 import com.newgaea.openEnd.Blocks.DEndStoneBlock;
 import com.newgaea.openEnd.Blocks.EndBrickBlock;
+import com.newgaea.openEnd.Blocks.EndSlabBlock;
 import com.newgaea.openEnd.Blocks.OEBlockStairs;
 import com.newgaea.openEnd.Blocks.ScorchedLogBlock;
 import com.newgaea.openEnd.Blocks.ScorchedWoodBlock;
@@ -92,6 +94,8 @@ public class OpenEndMod {
 	public static Block SmoothDarkEndStoneStairs;
 	public static Block EndStoneStairs;
 	public static Block DarkEndStoneStairs;
+	public static BlockHalfSlab EndSlab;
+	public static BlockHalfSlab DoubleEndSlab;
 	
 	public void InitBlocks()
 	{
@@ -190,10 +194,19 @@ public class OpenEndMod {
 		ScorchedWoodStairs=new OEBlockStairs(Configs.ScorchedWoodStairsId,ScorchedWood,0).setCreativeTab(tabOpenEndBlocks).setUnlocalizedName("ScorchedWoodSteps");
 		GameRegistry.registerBlock(ScorchedWoodStairs,"ScorchedWoodStairs");
 		LanguageRegistry.addName(ScorchedWoodStairs, "Scorched Wood Stairs");
-		MinecraftForge.setBlockHarvestLevel(ScorchedWoodStairs, "pick", 0);
+		MinecraftForge.setBlockHarvestLevel(ScorchedWoodStairs, "axe", 0);
 		GameRegistry.addShapedRecipe(new ItemStack(ScorchedWoodStairs), "x  ","xx ","xxx",'x',new ItemStack(ScorchedWood));
 		
+		EndSlab=(BlockHalfSlab) new EndSlabBlock(Configs.EndSlabsId, false).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("endSlab").setCreativeTab(tabOpenEndBlocks);
+		GameRegistry.registerBlock(EndSlab,"endSlab");
+		LanguageRegistry.addName(EndSlab, "End Slab");
+		MinecraftForge.setBlockHarvestLevel(EndSlab, "pick", 0);
+		GameRegistry.addShapedRecipe(new ItemStack(EndSlab,6), "xxx",'x',new ItemStack(SmoothEndStone));
 		
+		DoubleEndSlab=(BlockHalfSlab) new EndSlabBlock(Configs.EndDoubleSlabsId, true).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("endSlab").setCreativeTab(tabOpenEndBlocks);
+		GameRegistry.registerBlock(DoubleEndSlab,"endDoubleSlab");
+		LanguageRegistry.addName(DoubleEndSlab, "End Slab");
+		MinecraftForge.setBlockHarvestLevel(DoubleEndSlab, "pick", 0);
 	}
 	
 	
