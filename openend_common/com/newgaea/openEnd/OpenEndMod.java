@@ -6,11 +6,9 @@ package com.newgaea.openEnd;
 import java.util.logging.Logger;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockStairs;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemMultiTextureTile;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.Configuration;
 import net.minecraftforge.common.MinecraftForge;
@@ -150,11 +148,50 @@ public class OpenEndMod {
 		GameRegistry.addSmelting(Configs.DarkEndStoneId, new ItemStack(SmoothDarkEndStone), 0f);
 		
 		
+		EndStoneStairs=new OEBlockStairs(Configs.EndStoneStairsId, Block.whiteStone, 0).setCreativeTab(tabOpenEndBlocks).setUnlocalizedName("endstoneSteps");
+		GameRegistry.registerBlock(EndStoneStairs,"EndStoneStairs");
+		LanguageRegistry.addName(EndStoneStairs, "End Stone Stairs");
+		MinecraftForge.setBlockHarvestLevel(EndStoneStairs, "pick", 0);
+		GameRegistry.addShapedRecipe(new ItemStack(EndStoneStairs), "x  ","xx ","xxx",'x',new ItemStack(Block.whiteStone));
+	
+		
+		
 		DarkEndStoneStairs=new OEBlockStairs(Configs.DarkEndStoneStairsId,DEndStone,1).setCreativeTab(tabOpenEndBlocks).setUnlocalizedName("darkendstoneSteps");
 		GameRegistry.registerBlock(DarkEndStoneStairs,"DarkEndStoneStairs");
 		LanguageRegistry.addName(DarkEndStoneStairs, "Dark End Stone Stairs");
 		MinecraftForge.setBlockHarvestLevel(DarkEndStoneStairs, "pick", 0);
+		GameRegistry.addShapedRecipe(new ItemStack(DarkEndStoneStairs), "x  ","xx ","xxx",'x',new ItemStack(DEndStone));
 		
+		EndBricksStairs=new OEBlockStairs(Configs.EndBrickStairsId,EndBricks,0).setCreativeTab(tabOpenEndBlocks).setUnlocalizedName("endBrickSteps");
+		GameRegistry.registerBlock(EndBricksStairs,"EndBrickStairs");
+		LanguageRegistry.addName(EndBricksStairs, "End Brick Stairs");
+		MinecraftForge.setBlockHarvestLevel(EndBricksStairs, "pick", 0);
+		GameRegistry.addShapedRecipe(new ItemStack(EndBricksStairs), "x  ","xx ","xxx",'x',new ItemStack(EndBricks));
+		
+		DEndBricksStairs=new OEBlockStairs(Configs.DarkEndBrickStairsId,DEndBricks,0).setCreativeTab(tabOpenEndBlocks).setUnlocalizedName("darkEndBrickSteps");
+		GameRegistry.registerBlock(DEndBricksStairs,"DarkEndBrickStairs");
+		LanguageRegistry.addName(DEndBricksStairs, "Dark End Brick Stairs");
+		MinecraftForge.setBlockHarvestLevel(DEndBricksStairs, "pick", 0);
+		GameRegistry.addShapedRecipe(new ItemStack(DEndBricksStairs), "x  ","xx ","xxx",'x',new ItemStack(DEndBricks));
+		
+		
+		SmoothEndStoneStairs=new OEBlockStairs(Configs.SmoothEndStoneStairsId,SmoothEndStone,0).setCreativeTab(tabOpenEndBlocks).setUnlocalizedName("smoothEndStoneSteps");
+		GameRegistry.registerBlock(SmoothEndStoneStairs,"SmoothEndStoneStairs");
+		LanguageRegistry.addName(SmoothEndStoneStairs, "Smooth End Stone Stairs");
+		MinecraftForge.setBlockHarvestLevel(SmoothEndStoneStairs, "pick", 0);
+		GameRegistry.addShapedRecipe(new ItemStack(SmoothEndStoneStairs), "x  ","xx ","xxx",'x',new ItemStack(SmoothEndStone));
+		
+		SmoothDarkEndStoneStairs=new OEBlockStairs(Configs.DarkSmoothEndStoneStairsId,SmoothDarkEndStone,0).setCreativeTab(tabOpenEndBlocks).setUnlocalizedName("DarkSmoothEndStoneSteps");
+		GameRegistry.registerBlock(SmoothDarkEndStoneStairs,"SmoothDarkEndStoneStairs");
+		LanguageRegistry.addName(SmoothDarkEndStoneStairs, "Smooth Dark End Stone Stairs");
+		MinecraftForge.setBlockHarvestLevel(SmoothDarkEndStoneStairs, "pick", 0);
+		GameRegistry.addShapedRecipe(new ItemStack(SmoothDarkEndStoneStairs), "x  ","xx ","xxx",'x',new ItemStack(SmoothDarkEndStone));
+		
+		ScorchedWoodStairs=new OEBlockStairs(Configs.ScorchedWoodStairsId,ScorchedWood,0).setCreativeTab(tabOpenEndBlocks).setUnlocalizedName("ScorchedWoodSteps");
+		GameRegistry.registerBlock(ScorchedWoodStairs,"ScorchedWoodStairs");
+		LanguageRegistry.addName(ScorchedWoodStairs, "Scorched Wood Stairs");
+		MinecraftForge.setBlockHarvestLevel(ScorchedWoodStairs, "pick", 0);
+		GameRegistry.addShapedRecipe(new ItemStack(ScorchedWoodStairs), "x  ","xx ","xxx",'x',new ItemStack(ScorchedWood));
 		
 		
 	}
