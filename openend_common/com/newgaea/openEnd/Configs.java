@@ -47,6 +47,7 @@ public class Configs {
 	public static @CfgId(block=true,comment="Block ID for Dark End Slabs Slabs") int DarkEndDoubleSlabs=517;
 	// Items!
 	public static @CfgId(block=false,comment="Item ID for the test schematic Placer") int schematicPlacer=2015;
+	public static @CfgId(block=false,comment="Item ID for the end slab Item") int endSlabItem=2016;
 	
 	public static void load(Configuration config)
 	{
