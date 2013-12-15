@@ -16,3 +16,14 @@
 	12:45 - I think I'm done with the textures, at least for now.
 		Alabaster may get a pass to be a bit less blatanty tiled on the brown veins, but for right now I'm satisfied with the work I've gotten done.
 	13:05 - Have to do some chores and make lunch. Will be back in 60 minutes at most.
+	13:35 - Dishes done, so here's a summary of our goals:
+		We're going to add Dark End Stone and possibly Alabasater to worldgen for the End dimension.
+		We're going to add as quick of a solution for End Villages as we can: right now it looks like we're starting from the core village, and replacing the well with and Obsidian or Alabaster spire.
+		Alabaster Villages will use regular End Stone for their buildings, while Obsidian Villages will use Dark End Stone.
+		Right now, they should generate with Villagers, but we hope to replace this in later development with a new type of villager unique to The End.
+		You will be able to summon more Ender Dragons through this new content, 
+		We'll consider the project complete for Modjam (not 100% complete, but Modjam goal achieved) if we can get Alabaster Villages, Dark End Stone, and Alabaster added to the worldgen for The End, as well as the ability to trigger a second Ender Dragon.
+	Our definite later goals:
+		We want to add a veriety of lore in Fortresses and The End that explains our vision -- but this may not quite fit the normal minecraft feel. Adding lore books is a late goal.
+		We would like to have Scorched Trees generate rarely in the landscape of The End -- and Scorched Saplings drop from their leaves.
+		We may add some other features later on that we've only discussed a bit so far... among them, the option of two-way portals to and from The End. But those are post-jam goals, since we both still have our jobs at some point before the jam ends.
