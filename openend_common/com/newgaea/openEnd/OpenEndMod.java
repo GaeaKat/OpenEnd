@@ -94,8 +94,8 @@ public class OpenEndMod {
 	public static Block SmoothDarkEndStoneStairs;
 	public static Block EndStoneStairs;
 	public static Block DarkEndStoneStairs;
-	public static BlockHalfSlab EndSlab;
-	public static BlockHalfSlab DoubleEndSlab;
+	public static Block EndSlab;
+	public static Block DoubleEndSlab;
 	
 	public void InitBlocks()
 	{
@@ -197,13 +197,13 @@ public class OpenEndMod {
 		MinecraftForge.setBlockHarvestLevel(ScorchedWoodStairs, "axe", 0);
 		GameRegistry.addShapedRecipe(new ItemStack(ScorchedWoodStairs), "x  ","xx ","xxx",'x',new ItemStack(ScorchedWood));
 		
-		EndSlab=(BlockHalfSlab) new EndSlabBlock(Configs.EndSlabsId, false).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("endSlab").setCreativeTab(tabOpenEndBlocks);
+		EndSlab= new EndSlabBlock(Configs.EndSlabsId, false).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("endSlab").setCreativeTab(tabOpenEndBlocks);
 		GameRegistry.registerBlock(EndSlab,"endSlab");
 		LanguageRegistry.addName(EndSlab, "End Slab");
 		MinecraftForge.setBlockHarvestLevel(EndSlab, "pick", 0);
 		GameRegistry.addShapedRecipe(new ItemStack(EndSlab,6), "xxx",'x',new ItemStack(SmoothEndStone));
 		
-		DoubleEndSlab=(BlockHalfSlab) new EndSlabBlock(Configs.EndDoubleSlabsId, true).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("endSlab").setCreativeTab(tabOpenEndBlocks);
+		DoubleEndSlab= new EndSlabBlock(Configs.EndDoubleSlabsId, true).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("endSlab").setCreativeTab(tabOpenEndBlocks);
 		GameRegistry.registerBlock(DoubleEndSlab,"endDoubleSlab");
 		LanguageRegistry.addName(DoubleEndSlab, "End Slab");
 		MinecraftForge.setBlockHarvestLevel(DoubleEndSlab, "pick", 0);
