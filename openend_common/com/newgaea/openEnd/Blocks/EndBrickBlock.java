@@ -13,6 +13,7 @@ import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
+import net.minecraft.world.World;
 
 /**
  * @author Katrina
@@ -79,4 +80,9 @@ public class EndBrickBlock extends Block {
             this.end_brick_icons[i] = par1IconRegister.registerIcon(s);
         }
     }
+	@Override
+	@Deprecated
+	public boolean canDragonDestroy(World world, int x, int y, int z) {
+		return false;
+	}
 }
