@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Random;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
+import net.minecraft.world.gen.structure.StructureComponent;
+import net.minecraft.world.gen.structure.StructureStart;
 
 public class StructureEndVillageStart extends StructureStart
 {
@@ -16,8 +18,8 @@ public class StructureEndVillageStart extends StructureStart
     public StructureEndVillageStart(World par1World, Random par2Random, int par3, int par4, int par5)
     {
         super(par3, par4);
-        List list = StructureVillagePieces.getStructureVillageWeightedPieceList(par2Random, par5);
-        ComponentVillageStartPiece componentvillagestartpiece = new ComponentVillageStartPiece(par1World.getWorldChunkManager(), 0, par2Random, (par3 << 4) + 2, (par4 << 4) + 2, list, par5);
+        List list = StructureEndVillagePieces.getStructureVillageWeightedPieceList(par2Random, par5);
+        ComponentEndVillageStartPiece componentvillagestartpiece = new ComponentEndVillageStartPiece(par1World.getWorldChunkManager(), 0, par2Random, (par3 << 4) + 2, (par4 << 4) + 2, list, par5);
         this.components.add(componentvillagestartpiece);
         componentvillagestartpiece.buildComponent(componentvillagestartpiece, this.components, par2Random);
         List list1 = componentvillagestartpiece.field_74930_j;
@@ -50,7 +52,7 @@ public class StructureEndVillageStart extends StructureStart
         {
             StructureComponent structurecomponent1 = (StructureComponent)iterator.next();
 
-            if (!(structurecomponent1 instanceof ComponentVillageRoadPiece))
+            if (!(structurecomponent1 instanceof ComponentEndVillageRoadPiece))
             {
                 ++l;
             }
