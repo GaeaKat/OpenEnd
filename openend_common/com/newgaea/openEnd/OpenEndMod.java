@@ -23,6 +23,8 @@ import com.newgaea.openEnd.Blocks.EndBrickBlock;
 import com.newgaea.openEnd.Blocks.OEBlockStairs;
 import com.newgaea.openEnd.Blocks.ScorchedLogBlock;
 import com.newgaea.openEnd.Blocks.ScorchedWoodBlock;
+import com.newgaea.openEnd.Blocks.SmoothDarkEndStoneBlock;
+import com.newgaea.openEnd.Blocks.SmoothEndStoneBlock;
 import com.newgaea.openEnd.items.ItemSchematicPlacer;
 import com.newgaea.openEnd.lib.Reference;
 
@@ -83,7 +85,16 @@ public class OpenEndMod {
 	public static Block ScorchedLog;
 	public static Block ScorchedWood;
 	public static Block AlabasterStone;
-	public static Block EndBrickStairs;
+	public static Block SmoothEndStone;
+	public static Block SmoothDarkEndStone;
+	public static Block EndBricksStairs;
+	public static Block DEndBricksStairs;
+	public static Block ScorchedWoodStairs;
+	public static Block SmoothEndStoneStairs;
+	public static Block SmoothDarkEndStoneStairs;
+	public static Block EndStoneStairs;
+	public static Block DarkEndStoneStairs;
+	
 	public void InitBlocks()
 	{
 		DEndStone=new DEndStoneBlock(Configs.DarkEndStoneId, Material.rock).setHardness(3.0F).setResistance(15.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("darkEndStone").setCreativeTab(tabOpenEndBlocks).setTextureName("openend:dark_end_stone");
@@ -125,9 +136,26 @@ public class OpenEndMod {
 		GameRegistry.registerBlock(AlabasterStone,"alabasterStone");
 		LanguageRegistry.addName(AlabasterStone, "Alabaster");
 		MinecraftForge.setBlockHarvestLevel(AlabasterStone, "pick", 3);
-		EndBrickStairs=new OEBlockStairs(506,DEndStone,1).setCreativeTab(tabOpenEndBlocks).setUnlocalizedName("endSteps");
-		GameRegistry.registerBlock(EndBrickStairs,"EndBrickStairs");
-		LanguageRegistry.addName(EndBrickStairs, "End Brick Stairs");
+		
+		SmoothEndStone=new SmoothEndStoneBlock(Configs.SmoothEndStoneId).setHardness(3.0F).setResistance(15.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("smoothEndStone").setCreativeTab(tabOpenEndBlocks).setTextureName("openend:smooth_end_stone");
+		GameRegistry.registerBlock(SmoothEndStone, "smoothEndStone");
+		LanguageRegistry.addName(SmoothEndStone, "Smooth End Stone");
+		MinecraftForge.setBlockHarvestLevel(SmoothEndStone, "pick", 0);
+		GameRegistry.addSmelting(Block.whiteStone.blockID, new ItemStack(SmoothEndStone), 0f);
+		
+		SmoothDarkEndStone=new SmoothDarkEndStoneBlock(Configs.DarkSmoothEndStoneId).setHardness(3.0F).setResistance(15.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("smoothDarkEndStone").setCreativeTab(tabOpenEndBlocks).setTextureName("openend:smooth_dark_end_stone");
+		GameRegistry.registerBlock(SmoothDarkEndStone, "smoothDarkEndStone");
+		LanguageRegistry.addName(SmoothDarkEndStone, "Smooth Dark End Stone");
+		MinecraftForge.setBlockHarvestLevel(SmoothDarkEndStone, "pick", 0);
+		GameRegistry.addSmelting(Configs.DarkEndStoneId, new ItemStack(SmoothDarkEndStone), 0f);
+		
+		
+		DarkEndStoneStairs=new OEBlockStairs(Configs.DarkEndStoneStairsId,DEndStone,1).setCreativeTab(tabOpenEndBlocks).setUnlocalizedName("darkendstoneSteps");
+		GameRegistry.registerBlock(DarkEndStoneStairs,"DarkEndStoneStairs");
+		LanguageRegistry.addName(DarkEndStoneStairs, "Dark End Stone Stairs");
+		MinecraftForge.setBlockHarvestLevel(DarkEndStoneStairs, "pick", 0);
+		
+		
 		
 	}
 	
