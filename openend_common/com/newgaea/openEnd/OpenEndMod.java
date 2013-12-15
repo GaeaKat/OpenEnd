@@ -27,6 +27,7 @@ import com.newgaea.openEnd.Blocks.SmoothEndStoneBlock;
 import com.newgaea.openEnd.gen.structure.EndWorldGenHandler;
 import com.newgaea.openEnd.items.ItemSchematicPlacer;
 import com.newgaea.openEnd.lib.Reference;
+import com.newgaea.openEnd.reflection.ReflectClass;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
@@ -226,6 +227,8 @@ public class OpenEndMod {
 		InitItems();
 		
 		MinecraftForge.EVENT_BUS.register(new EndWorldGenHandler());
+		ReflectClass reflect=new ReflectClass();
+		reflect.reflectme();
 	}	
 	
 	@EventHandler
