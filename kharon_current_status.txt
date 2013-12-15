@@ -22,8 +22,10 @@
 		Alabaster Villages will use regular End Stone for their buildings, while Obsidian Villages will use Dark End Stone.
 		Right now, they should generate with Villagers, but we hope to replace this in later development with a new type of villager unique to The End.
 		You will be able to summon more Ender Dragons through this new content, 
-		We'll consider the project complete for Modjam (not 100% complete, but Modjam goal achieved) if we can get Alabaster Villages, Dark End Stone, and Alabaster added to the worldgen for The End, as well as the ability to trigger a second Ender Dragon.
+		We'll consider the project complete for Modjam (not 100% complete, but Modjam goal achieved) if we can get Alabaster Villages, Dark End Stone, and Alabaster added to the worldgen for The End, as well as the ability to trigger a second Ender Dragon. Also, we are definitely adding some lore books into the game to explain why The End is how it is.
 	Our definite later goals:
 		We want to add a veriety of lore in Fortresses and The End that explains our vision -- but this may not quite fit the normal minecraft feel. Adding lore books is a late goal.
 		We would like to have Scorched Trees generate rarely in the landscape of The End -- and Scorched Saplings drop from their leaves.
 		We may add some other features later on that we've only discussed a bit so far... among them, the option of two-way portals to and from The End. But those are post-jam goals, since we both still have our jobs at some point before the jam ends.
+	Nekosune is responsible for all of the coding, while I'm dealing with the artistic and creative bits -- the textures I've made, for example, and the lore text mentioned in the Modjam goals. So, once my lunch is ready, I can get to work on writing up our lore.
+	14:20 - Lunch ready, starting work on lore!
