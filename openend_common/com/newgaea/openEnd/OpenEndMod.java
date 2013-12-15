@@ -6,7 +6,6 @@ package com.newgaea.openEnd;
 import java.util.logging.Logger;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockHalfSlab;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -212,10 +211,13 @@ public class OpenEndMod {
 	
 	
 	public static Item testSchematicPlacer;
+	public static Item EndSlabItem;
 	public void InitItems()
 	{
 		testSchematicPlacer=new ItemSchematicPlacer(Configs.schematicPlacer).setCreativeTab(tabOpenEndItems).setUnlocalizedName("schematicPlacer");
 		GameRegistry.registerItem(testSchematicPlacer, "TestSchematicPlacer");
+		
+		
 	}
 	@EventHandler
 	public void Init(FMLInitializationEvent event)
