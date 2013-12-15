@@ -24,6 +24,7 @@ import com.newgaea.openEnd.Blocks.ScorchedLogBlock;
 import com.newgaea.openEnd.Blocks.ScorchedWoodBlock;
 import com.newgaea.openEnd.Blocks.SmoothDarkEndStoneBlock;
 import com.newgaea.openEnd.Blocks.SmoothEndStoneBlock;
+import com.newgaea.openEnd.gen.structure.EndWorldGenHandler;
 import com.newgaea.openEnd.items.ItemSchematicPlacer;
 import com.newgaea.openEnd.lib.Reference;
 
@@ -223,6 +224,8 @@ public class OpenEndMod {
 		InitBlocks();
 		LanguageRegistry.instance().addStringLocalization("itemGroup.tabOpenEndItems", "en_US","Open End Items");
 		InitItems();
+		
+		MinecraftForge.EVENT_BUS.register(new EndWorldGenHandler());
 	}	
 	
 	@EventHandler

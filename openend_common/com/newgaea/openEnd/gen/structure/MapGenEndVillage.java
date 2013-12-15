@@ -77,15 +77,15 @@ public class MapGenEndVillage extends MapGenStructure
 
         if (k == i1 && l == j1)
         {
-            boolean flag = this.worldObj.getWorldChunkManager().areBiomesViable(k * 16 + 8, l * 16 + 8, 0, villageSpawnBiomes);
+            //boolean flag = this.worldObj.getWorldChunkManager().areBiomesViable(k * 16 + 8, l * 16 + 8, 0, villageSpawnBiomes);
 
-            if (flag)
-            {
+            //if (flag)
+            //{
                 return true;
-            }
+            //}
         }
 
-        return false;
+        return true;
     }
 
     protected StructureStart getStructureStart(int par1, int par2)
