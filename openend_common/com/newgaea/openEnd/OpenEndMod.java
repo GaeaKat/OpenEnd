@@ -119,13 +119,13 @@ public class OpenEndMod {
 		LanguageRegistry.instance().addStringLocalization("tile.darkendbrick.chiseled.name","en_US", "Chisled Dark Endstone Brick");
 		MinecraftForge.setBlockHarvestLevel(DEndBricks, "pick", 0);
 		
-		ScorchedLog=new ScorchedLogBlock(Configs.ScorchedLogId).setHardness(2.0F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("scorchedLog").setCreativeTab(tabOpenEndBlocks).setTextureName("openend:scorched_log");
+		ScorchedLog=new ScorchedLogBlock(Configs.ScorchedLogId).setHardness(2.0F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("scorchedLog").setCreativeTab(tabOpenEndBlocks);
 		GameRegistry.registerBlock(ScorchedLog,"ScorchedLog");
 		LanguageRegistry.addName(ScorchedLog, "Scorched Log");
 		MinecraftForge.setBlockHarvestLevel(ScorchedLog, "axe", 0);
 		OreDictionary.registerOre("logWood", ScorchedLog);
 		
-		ScorchedWood=new ScorchedWoodBlock(Configs.ScorchedPlankId).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("ScorchedWood").setCreativeTab(tabOpenEndBlocks).setTextureName("openend:scorched_wood");
+		ScorchedWood=new ScorchedWoodBlock(Configs.ScorchedPlankId).setHardness(2.0F).setResistance(5.0F).setStepSound(Block.soundWoodFootstep).setUnlocalizedName("ScorchedWood").setCreativeTab(tabOpenEndBlocks).setTextureName("openend:planks_scorched");
 		GameRegistry.registerBlock(ScorchedWood,"ScorchedWood");
 		LanguageRegistry.addName(ScorchedWood, "Scorched Wood");
 		MinecraftForge.setBlockHarvestLevel(ScorchedWood, "axe", 0);
@@ -202,10 +202,7 @@ public class OpenEndMod {
 		MinecraftForge.setBlockHarvestLevel(EndSlab, "pick", 0);
 		GameRegistry.addShapedRecipe(new ItemStack(EndSlab,6), "xxx",'x',new ItemStack(SmoothEndStone));
 		
-		DoubleEndSlab= new EndSlabBlock(Configs.EndDoubleSlabsId, true).setHardness(2.0F).setResistance(10.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("endSlab").setCreativeTab(tabOpenEndBlocks);
-		GameRegistry.registerBlock(DoubleEndSlab,"endDoubleSlab");
-		LanguageRegistry.addName(DoubleEndSlab, "End Slab");
-		MinecraftForge.setBlockHarvestLevel(DoubleEndSlab, "pick", 0);
+		
 	}
 	
 	
