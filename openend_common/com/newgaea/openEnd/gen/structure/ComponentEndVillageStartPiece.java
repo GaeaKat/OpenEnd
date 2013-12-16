@@ -6,7 +6,7 @@ import java.util.Random;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.biome.WorldChunkManager;
 
-public class ComponentEndVillageStartPiece extends ComponentEndVillageWell
+public class ComponentEndVillageStartPiece extends ComponentEndVillageSpire
 {
     public WorldChunkManager worldChunkMngr;
 

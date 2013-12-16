@@ -46,7 +46,7 @@ public class StructureEndVillagePieces
         arraylist.add(new StructureEndVillagePieceWeight(ComponentEndVillageHouse2.class, 15, MathHelper.getRandomIntegerInRange(par0Random, 0, 1 + par1)));
         arraylist.add(new StructureEndVillagePieceWeight(ComponentEndVillageHouse3.class, 8, MathHelper.getRandomIntegerInRange(par0Random, 0 + par1, 3 + par1 * 2)));
         arraylist.add(new StructureEndVillagePieceWeight(ComponentEndVillageChurchDark.class, 1, MathHelper.getRandomIntegerInRange(par0Random, 0 + par1, 3 + par1 * 2)));
-        arraylist.add(new StructureEndVillagePieceWeight(ComponentEndVillageSpire.class, 1, MathHelper.getRandomIntegerInRange(par0Random, 0 + par1, 3 + par1 * 2)));
+        //arraylist.add(new StructureEndVillagePieceWeight(ComponentEndVillageSpire.class, 1, MathHelper.getRandomIntegerInRange(par0Random, 0 + par1, 3 + par1 * 2)));
 
         Iterator iterator = arraylist.iterator();
 
