@@ -29,6 +29,7 @@ public class StructureEndVillagePieces
         MapGenStructureIO.func_143031_a(ComponentEndVillageHouse3.class, "ViTRH");
         MapGenStructureIO.func_143031_a(ComponentEndVillageWell.class, "ViW");
         MapGenStructureIO.func_143031_a(ComponentEndVillageChurchDark.class, "ViSTC");
+        MapGenStructureIO.func_143031_a(ComponentEndVillageSpire.class, "ViSpi");
     }
 
     @SuppressWarnings("unchecked")
@@ -45,6 +46,7 @@ public class StructureEndVillagePieces
         arraylist.add(new StructureEndVillagePieceWeight(ComponentEndVillageHouse2.class, 15, MathHelper.getRandomIntegerInRange(par0Random, 0, 1 + par1)));
         arraylist.add(new StructureEndVillagePieceWeight(ComponentEndVillageHouse3.class, 8, MathHelper.getRandomIntegerInRange(par0Random, 0 + par1, 3 + par1 * 2)));
         arraylist.add(new StructureEndVillagePieceWeight(ComponentEndVillageChurchDark.class, 1, MathHelper.getRandomIntegerInRange(par0Random, 0 + par1, 3 + par1 * 2)));
+        arraylist.add(new StructureEndVillagePieceWeight(ComponentEndVillageSpire.class, 1, MathHelper.getRandomIntegerInRange(par0Random, 0 + par1, 3 + par1 * 2)));
 
         Iterator iterator = arraylist.iterator();
 
@@ -123,7 +125,10 @@ public class StructureEndVillagePieces
         {
         	object=ComponentEndVillageChurchDark.func_74919_a(par0ComponentVillageStartPiece, par2List, par3Random, par4, par5, par6, par7, par8);
         }
-
+        else if(oclass== ComponentEndVillageSpire.class)
+        {
+        	object=ComponentEndVillageSpire.func_74919_a(par0ComponentVillageStartPiece, par2List, par3Random, par4, par5, par6, par7, par8);
+        }
         return (ComponentEndVillage)object;
     }
 
