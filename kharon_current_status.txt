@@ -48,3 +48,8 @@
 	21:40 - This is awesome: Nekosune got villages working by forcing one at a set location. That means we'll have villages in the mod for sure. I also have more than half of the lore books written -- but I also only have about 80 minutes left!
 	
 	My goal right now is to make a Spire and a Dark Church for the villages, and then do the rest of my lore work after I get back tomorrow from my job.
+	
+	22:00 - I'm tired and going to go to bed in 30 minutes... Going to build the spire and dark church instead of more lore texts.
+	
+	22:35 - Took a few extra minutes, but built brick and stone churches... Afraid it's bedtime now, though.
+		Committing the whole world I was building in to the repo for nekosune.
