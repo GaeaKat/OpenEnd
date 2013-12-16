@@ -86,6 +86,7 @@ public class ComponentEndVillageSpire extends ComponentEndVillage {
         par1World.spawnEntityInWorld(entityendercrystal);
         //par1World.setBlock(par3StructureBoundingBox.maxX, par3StructureBoundingBox.maxY + l, par3StructureBoundingBox.maxZ, Block.bedrock.blockID, 0, 2);
         this.placeBlockAtCurrentPosition(par1World,Block.bedrock.blockID,0,0,l,0,par3StructureBoundingBox);
+        this.placeBlockAtCurrentPosition(par1World,Block.blockDiamond.blockID,0,par3StructureBoundingBox.getXSize(),l,par3StructureBoundingBox.getZSize(),par3StructureBoundingBox);
 		
 		return true;
 		

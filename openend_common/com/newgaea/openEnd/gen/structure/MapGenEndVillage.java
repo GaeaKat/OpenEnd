@@ -57,7 +57,7 @@ public class MapGenEndVillage extends MapGenStructure
     {
         int k = par1;
         int l = par2;
-        if(par1 == (-32 >> 4)  && par2 == (-32 >> 4))
+        if(par1 == (-176 >> 4)  && par2 == (176 >> 4))
         	return true;
         if (par1 < 0)
         {
