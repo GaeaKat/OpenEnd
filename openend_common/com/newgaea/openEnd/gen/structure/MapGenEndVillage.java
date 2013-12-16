@@ -14,7 +14,7 @@ import net.minecraft.world.gen.structure.StructureStart;
 public class MapGenEndVillage extends MapGenStructure
 {
     /** A list of all the biomes villages can spawn in. */
-    public static List villageSpawnBiomes = Arrays.asList(new BiomeGenBase[] {BiomeGenBase.plains, BiomeGenBase.desert});
+    public static List villageSpawnBiomes = Arrays.asList(new BiomeGenBase[] {BiomeGenBase.plains, BiomeGenBase.desert,BiomeGenBase.sky});
 
     /** World terrain type, 0 for normal, 1 for flat map */
     private int terrainType;
@@ -57,7 +57,8 @@ public class MapGenEndVillage extends MapGenStructure
     {
         int k = par1;
         int l = par2;
-
+        if(par1 == (-32 >> 4)  && par2 == (-32 >> 4))
+        	return true;
         if (par1 < 0)
         {
             par1 -= this.field_82665_g - 1;
@@ -78,15 +79,15 @@ public class MapGenEndVillage extends MapGenStructure
 
         if (k == i1 && l == j1)
         {
-            //boolean flag = this.worldObj.getWorldChunkManager().areBiomesViable(k * 16 + 8, l * 16 + 8, 0, villageSpawnBiomes);
+            boolean flag = this.worldObj.getWorldChunkManager().areBiomesViable(k * 16 + 8, l * 16 + 8, 0, villageSpawnBiomes);
 
-            //if (flag)
-            //{
+            if (flag)
+            {
                 return true;
-            //}
+            }
         }
 
-        return true;
+        return false;
     }
 
     protected StructureStart getStructureStart(int par1, int par2)

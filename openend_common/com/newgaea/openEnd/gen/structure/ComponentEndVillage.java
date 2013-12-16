@@ -2,6 +2,9 @@ package com.newgaea.openEnd.gen.structure;
 
 import java.util.List;
 import java.util.Random;
+
+import com.newgaea.openEnd.Configs;
+
 import net.minecraft.block.Block;
 import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.nbt.NBTTagCompound;
@@ -169,38 +172,36 @@ public abstract class ComponentEndVillage extends StructureComponent
         MinecraftForge.TERRAIN_GEN_BUS.post(event);
         if (event.getResult() == Result.DENY) return event.replacement;
 
-        if (this.field_143014_b)
-        {
+
             if (par1 == Block.wood.blockID)
             {
-                return Block.sandStone.blockID;
+                return Configs.ScorchedLogId;
             }
 
             if (par1 == Block.cobblestone.blockID)
             {
-                return Block.sandStone.blockID;
+                return Block.whiteStone.blockID;
             }
 
             if (par1 == Block.planks.blockID)
             {
-                return Block.sandStone.blockID;
+                return Configs.ScorchedPlankId;
             }
 
             if (par1 == Block.stairsWoodOak.blockID)
             {
-                return Block.stairsSandStone.blockID;
+                return Configs.ScorchedWoodStairsId;
             }
 
             if (par1 == Block.stairsCobblestone.blockID)
             {
-                return Block.stairsSandStone.blockID;
+                return Configs.EndStoneStairsId;
             }
 
             if (par1 == Block.gravel.blockID)
             {
                 return Block.sandStone.blockID;
             }
-        }
 
         return par1;
     }
