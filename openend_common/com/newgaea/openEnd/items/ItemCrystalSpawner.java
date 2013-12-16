@@ -68,5 +68,142 @@ public class ItemCrystalSpawner extends Item {
 	        
 	        return false;
 	}
+		
+		public void checkSummoning(World world,int x,int y, int z)
+		{
+			
+			int xCorner=-1;
+			int zCorner=-1;
+			
+			// Long way round I know, there is probably better but is only 20 blocks
+			// x +5 z+ 5
+			
+			boolean blocks;
+			boolean fin=false;;
+			
 
+			blocks=checkArea(world, x, y, z, 0);
+			if(blocks)
+			{
+				xCorner=x+5;
+				zCorner=z+5;
+				fin=true;
+			}
+			blocks=checkArea(world, x, y, z, 1);
+			if(blocks)
+			{
+				xCorner=x+5;
+				zCorner=z+5;
+				fin=true;
+			}
+			blocks=checkArea(world, x, y, z, 2);
+			if(blocks)
+			{
+				xCorner=x+5;
+				zCorner=z+5;
+				fin=true;
+			}
+			blocks=checkArea(world, x, y, z, 3);
+			if(blocks)
+			{
+				xCorner=x+5;
+				zCorner=z+5;
+			}
+			for(int i=0;i<4;i++)
+			{
+				if(checkArea(world, x, y, z, i))
+				{
+					switch(i)
+					{
+					case 0:
+						xCorner=x+5;
+						zCorner=z+5;
+						break;
+					case 1:
+						xCorner=x+5;
+						zCorner=z-5;
+						break;
+					case 2:
+						xCorner=x-5;
+						zCorner=z+5;
+						break;
+					case 3:
+						xCorner=x-5;
+						zCorner=z-5;
+						break;
+					}
+				}
+			}
+		}
+
+		public boolean checkArea(World world,int x,int y,int z,int direction)
+		{
+			boolean blocksComplete=true;
+			
+			switch(direction)
+			{
+			case 0:
+				for(int i=x;i<x+5;i++)
+				{
+					for(int j=z;j<z+5;j++)
+					{
+						if(world.getBlockId(i, y-2, j)!=Block.obsidian.blockID)
+						{
+							blocksComplete=false;
+							break;
+						}
+					}
+				}
+				return blocksComplete;
+				
+				
+				
+			case 1:
+				for(int i=x;i<x+5;i++)
+				{
+					for(int j=z;j>z-5;j--)
+					{
+						if(world.getBlockId(i, y-2, j)!=Block.obsidian.blockID)
+						{
+							blocksComplete=false;
+							break;
+						}
+					}
+				}
+				return blocksComplete;
+				
+				
+				case 2:
+				for(int i=x;i>x-5;i--)
+				{
+					for(int j=z;j<z+5;j++)
+					{
+						if(world.getBlockId(i, y-2, j)!=Block.obsidian.blockID)
+						{
+							blocksComplete=false;
+							break;
+						}
+					}
+				}
+				
+				return blocksComplete;
+				
+				case 3:
+				for(int i=x;i>x-5;i--)
+				{
+					for(int j=z;j>z-5;j--)
+					{
+						if(world.getBlockId(i, y-2, j)!=Block.obsidian.blockID)
+						{
+							blocksComplete=false;
+							break;
+						}
+					}
+				}
+				return blocksComplete;
+				default:
+					return false;
+			}
+			
+		}
 }
