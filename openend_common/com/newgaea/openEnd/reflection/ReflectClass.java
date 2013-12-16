@@ -16,9 +16,8 @@ public class ReflectClass {
 	
 	public void reflectme()
 	{
-		String[] remaps=remapMethodNames("ChunkProviderEnd", "provideChunk");
+		String[] remaps=remapMethodNames("net/minecraft/world/gen/ChunkProviderEnd", "func_73154_d");
 		OpenEndMod.logger.info(remaps[0].toString());
-		
 	}
 	
 	
