@@ -44,17 +44,17 @@ public class ComponentEndVillageWell extends ComponentEndVillage
      */
     public boolean addComponentParts(World par1World, Random par2Random, StructureBoundingBox par3StructureBoundingBox)
     {
-        if (this.field_143015_k < 0)
-        {
-            this.field_143015_k = this.getAverageGroundLevel(par1World, par3StructureBoundingBox);
-
-            if (this.field_143015_k < 0)
-            {
-                return true;
-            }
-
-            this.boundingBox.offset(0, this.field_143015_k - this.boundingBox.maxY + 3, 0);
-        }
+        ///if (this.field_143015_k < 0)
+        //{
+        //    this.field_143015_k = this.getAverageGroundLevel(par1World, par3StructureBoundingBox);
+//
+///            if (this.field_143015_k < 0)
+  //          {
+  //              return true;
+  //          }
+///
+  ///          this.boundingBox.offset(0, this.field_143015_k - this.boundingBox.maxY + 3, 0);
+    //    }
 
         this.fillWithBlocks(par1World, par3StructureBoundingBox, 1, 0, 1, 4, 12, 4, Block.cobblestone.blockID, Block.waterMoving.blockID, false);
         this.placeBlockAtCurrentPosition(par1World, 0, 0, 2, 12, 2, par3StructureBoundingBox);

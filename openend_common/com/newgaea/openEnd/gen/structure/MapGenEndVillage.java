@@ -25,6 +25,7 @@ public class MapGenEndVillage extends MapGenStructure
     {
         this.field_82665_g = 32;
         this.field_82666_h = 8;
+        this.terrainType=1;
     }
 
     public MapGenEndVillage(Map par1Map)
@@ -49,7 +50,7 @@ public class MapGenEndVillage extends MapGenStructure
 
     public String func_143025_a()
     {
-        return "Village";
+        return "EndVillage";
     }
 
     protected boolean canSpawnStructureAtCoords(int par1, int par2)
