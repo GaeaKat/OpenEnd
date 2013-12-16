@@ -120,7 +120,7 @@ public class ItemCrystalSpawner extends Item {
 				OpenEndMod.logger.info(Integer.toString(zCorner));
 				OpenEndMod.logger.info(Integer.toString(world.getBlockId(xCorner, y-2, zCorner)));
 				OpenEndMod.logger.info(Integer.toString(world.getBlockId(xCorner, y-1, zCorner)));
-				
+				OpenEndMod.logger.info(Integer.toString(direction));
 				switch(direction)
 				{
 				case 0:
@@ -130,25 +130,26 @@ public class ItemCrystalSpawner extends Item {
 					}
 					break;
 				case 1:
-					if(world.getBlockId(xCorner, y-1, zCorner)==Block.obsidian.blockID && world.getBlockId(xCorner-4, y-1, zCorner)==Block.obsidian.blockID && world.getBlockId(xCorner, y-1, zCorner-4)==Block.obsidian.blockID)
+					if(world.getBlockId(xCorner, y-1, zCorner)==Block.obsidian.blockID && world.getBlockId(xCorner-4, y-1, zCorner)==Block.obsidian.blockID && world.getBlockId(xCorner, y-1, zCorner+4)==Block.obsidian.blockID)
 					{
 						allBlocks=true;
 					}
 					break;
 				case 2:
-					if(world.getBlockId(xCorner, y-1, zCorner)==Block.obsidian.blockID && world.getBlockId(xCorner-4, y-1, zCorner)==Block.obsidian.blockID && world.getBlockId(xCorner, y-1, zCorner-4)==Block.obsidian.blockID)
+					if(world.getBlockId(xCorner, y-1, zCorner)==Block.obsidian.blockID && world.getBlockId(xCorner+4, y-1, zCorner)==Block.obsidian.blockID && world.getBlockId(xCorner, y-1, zCorner-4)==Block.obsidian.blockID)
 					{
 						allBlocks=true;
 					}
 					break;
 				case 3:
-					if(world.getBlockId(xCorner, y-1, zCorner)==Block.obsidian.blockID && world.getBlockId(xCorner-4, y-1, zCorner)==Block.obsidian.blockID && world.getBlockId(xCorner, y-1, zCorner-4)==Block.obsidian.blockID)
+					if(world.getBlockId(xCorner, y-1, zCorner)==Block.obsidian.blockID && world.getBlockId(xCorner+4, y-1, zCorner)==Block.obsidian.blockID && world.getBlockId(xCorner, y-1, zCorner+4)==Block.obsidian.blockID)
 					{
 						allBlocks=true;
 					}
 					break;
 					
 				}
+				OpenEndMod.logger.info(Boolean.toString(allBlocks));
 			}
 		}
 
