@@ -31,3 +31,16 @@
 	14:20 - Lunch ready, starting work on lore!
 	
 	15:14 - Have to go to the store for some important shopping. Will be back as soon as I can.
+	
+	19:00 - Amazing how this story is unfolding... but I'm going to take a break for supper now. I probably have at least 13 more of these littke lore booklets to write...
+	
+	19:30 - Alright. Just had a planning chat with Nekosune and we reached a conclusion: our initial goal may have been a bit too grand for Modjam time period, considering our job commitments. We are resetting our goal:
+	[1] The End will have two new blocks in worldgen - Alabaster and Dark End Stone.
+	[2] Ancient, Elysian, and Ender Lore Books will have a chance of spawning as dungeon treasures. These books will reveal a story about the history of The End according to our mod.
+	[3] Items will exist that make it possible to summon a new Ender Dragon.
+	
+	All of the blocks we need at the moment are made, and then some for future plans. So [1] only requires modding the worldgen for the End to add them in...
+	
+	[2] is a work in progress as I write the lore books noted in the tabs for Notepad++ -- once the text files are made, we can get them added in as books.
+	
+	[3] is the only thing I believe we've not started work on yet, and I will be working on the icons for them as soon as I know what they are.
