@@ -38,7 +38,7 @@ public class EndWorldGenHandler {
 			ExtendedBlockStorage[] arr=((ChunkProviderServer)postEvent.chunkProvider).loadChunk(postEvent.chunkX, postEvent.chunkZ).getBlockStorageArray();
 			byte[] temp=new byte[arr.length];
 			village.generate(postEvent.chunkProvider,postEvent.world,postEvent.chunkX,postEvent.chunkZ,temp);
-			OpenEndMod.logger.info(Byte.toString(temp[1]));
+			//OpenEndMod.logger.info(Byte.toString(temp[1]));
 			village.generateStructuresInChunk(postEvent.world, postEvent.rand, postEvent.chunkX, postEvent.chunkZ);
 			
 		}

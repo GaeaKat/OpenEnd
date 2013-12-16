@@ -86,12 +86,67 @@ public class ComponentEndVillageSpire extends ComponentEndVillage {
         par1World.spawnEntityInWorld(entityendercrystal);
         //par1World.setBlock(par3StructureBoundingBox.maxX, par3StructureBoundingBox.maxY + l, par3StructureBoundingBox.maxZ, Block.bedrock.blockID, 0, 2);
         this.placeBlockAtCurrentPosition(par1World,Block.bedrock.blockID,0,0,l,0,par3StructureBoundingBox);
-        this.placeBlockAtCurrentPosition(par1World,Block.blockDiamond.blockID,0,par3StructureBoundingBox.getXSize(),l,par3StructureBoundingBox.getZSize(),par3StructureBoundingBox);
-		
+        
+		MakeHemiSphere(350, par1World, par3StructureBoundingBox, 0, 0, 0, Block.whiteStone.blockID, 0);
 		return true;
 		
 	}
-	 public void buildComponent(StructureComponent par1StructureComponent, List par2List, Random par3Random)
+	
+	
+	
+	
+	
+		public void MakeHemiSphere(int radius, World world,StructureBoundingBox boundingBox,int xPos,int yPos,int zPos,int blockId,int blockData)
+		{
+			  final double invRadiusX = 1 / radius;
+		      final double invRadiusY = 1 / radius;
+		      final double invRadiusZ = 1 / radius;
+		      
+		      final int ceilRadiusX = (int) Math.ceil(radius);
+		        final int ceilRadiusY = (int) Math.ceil(radius);
+		        final int ceilRadiusZ = (int) Math.ceil(radius);
+
+		        double nextXn = 0;
+		        forX: for (int x = 0; x <= ceilRadiusX; ++x) {
+		            final double xn = nextXn;
+		            nextXn = (x + 1) * invRadiusX;
+		            double nextYn = 0;
+		            forY: for (int y = 0; y <= ceilRadiusY; ++y) {
+		                final double yn = nextYn;
+		                nextYn = (y + 1) * invRadiusY;
+		                double nextZn = 0;
+		                forZ: for (int z = 0; z <= ceilRadiusZ; ++z) {
+		                    final double zn = nextZn;
+		                    nextZn = (z + 1) * invRadiusZ;
+
+		                    double distanceSq = lengthSq(xn, yn, zn);
+		                    if (distanceSq > 1) {
+		                        if (z == 0) {
+		                            if (y == 0) {
+		                                break forX;
+		                            }
+		                            break forY;
+		                        }
+		                        break forZ;
+		                    }
+
+		                    
+
+		                    
+		                    this.placeBlockAtCurrentPosition(world,blockId,blockData,xPos+x,yPos+(-y),zPos+z,boundingBox);
+		                    
+		                    this.placeBlockAtCurrentPosition(world,blockId,blockData,xPos+(-x),yPos+(-y),zPos+(z),boundingBox);
+		                    this.placeBlockAtCurrentPosition(world,blockId,blockData,xPos+(x),yPos+(-y),zPos+(-z),boundingBox);
+		                    this.placeBlockAtCurrentPosition(world,blockId,blockData,xPos+(-x),yPos+(-y),zPos+(-z),boundingBox);
+		                }
+		            }
+		        }
+		}
+		 private static final double lengthSq(double x, double y, double z) {
+		        return (x * x) + (y * y) + (z * z);
+		    }
+
+		    public void buildComponent(StructureComponent par1StructureComponent, List par2List, Random par3Random)
 	    {
 	        StructureEndVillagePieces.getNextStructureComponentVillagePath((ComponentEndVillageStartPiece)par1StructureComponent, par2List, par3Random, this.boundingBox.minX - 1, this.boundingBox.maxY - 4, this.boundingBox.minZ + 1, 1, this.getComponentType());
 	        StructureEndVillagePieces.getNextStructureComponentVillagePath((ComponentEndVillageStartPiece)par1StructureComponent, par2List, par3Random, this.boundingBox.maxX + 1, this.boundingBox.maxY - 4, this.boundingBox.minZ + 1, 3, this.getComponentType());
