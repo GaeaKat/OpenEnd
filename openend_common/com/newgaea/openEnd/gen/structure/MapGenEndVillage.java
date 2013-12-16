@@ -6,6 +6,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.Map.Entry;
+
+import com.newgaea.openEnd.Configs;
+
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.structure.MapGenStructure;
@@ -57,7 +60,7 @@ public class MapGenEndVillage extends MapGenStructure
     {
         int k = par1;
         int l = par2;
-        if(par1 == (-176 >> 4)  && par2 == (176 >> 4))
+        if(par1 == (Configs.villageXPos >> 4)  && par2 == (Configs.villageZPos >> 4))
         	return true;
         if (par1 < 0)
         {

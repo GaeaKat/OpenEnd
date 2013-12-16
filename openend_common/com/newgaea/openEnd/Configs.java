@@ -16,7 +16,8 @@ public class Configs {
 	@Retention(RetentionPolicy.RUNTIME)
 	private static @interface CfgBool {public String comment() default "";}
 	
-	
+	@Retention(RetentionPolicy.RUNTIME)
+	private static @interface CfgInteger {public String comment() default "";}
 	
 	
 	public static @CfgBool(comment="This setting controls whether the mod adds any world gen, recommended on!") boolean worldgen=true;
@@ -47,7 +48,12 @@ public class Configs {
 	public static @CfgId(block=true,comment="Block ID for Dark End Slabs Slabs") int DarkEndDoubleSlabs=517;
 	// Items!
 	public static @CfgId(block=false,comment="Item ID for the test schematic Placer") int schematicPlacer=2015;
-	public static @CfgId(block=false,comment="Item ID for the end slab Item") int endSlabItem=2016;
+	public static @CfgId(block=false,comment="Item ID for the crystal Spawner") int crystalSpawner=2016;
+	
+	
+	// Numerical settings
+	public static @CfgInteger(comment="X postion of test village in End") int villageXPos=-176;
+	public static @CfgInteger(comment="Z postion of test village in End") int villageZPos=176;
 	
 	public static void load(Configuration config)
 	{
@@ -77,6 +83,13 @@ public class Configs {
 						boolean bool=field.getBoolean(null);
 						bool=config.get(Configuration.CATEGORY_GENERAL, field.getName(), bool,bAnnotation.comment()).getBoolean(bool);
 						field.setBoolean(null, bool);
+					}
+					if(field.isAnnotationPresent(CfgInteger.class))
+					{
+						CfgInteger iAnnotation=field.getAnnotation(CfgInteger.class);
+						int integer=field.getInt(null);
+						integer=config.get(Configuration.CATEGORY_GENERAL, field.getName(), integer,iAnnotation.comment()).getInt(integer);
+						field.setInt(null, integer);
 					}
 				}
 			}

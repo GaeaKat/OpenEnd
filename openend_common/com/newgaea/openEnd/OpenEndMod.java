@@ -25,6 +25,7 @@ import com.newgaea.openEnd.Blocks.ScorchedWoodBlock;
 import com.newgaea.openEnd.Blocks.SmoothDarkEndStoneBlock;
 import com.newgaea.openEnd.Blocks.SmoothEndStoneBlock;
 import com.newgaea.openEnd.gen.structure.EndWorldGenHandler;
+import com.newgaea.openEnd.items.ItemCrystalSpawner;
 import com.newgaea.openEnd.items.ItemSchematicPlacer;
 import com.newgaea.openEnd.lib.Reference;
 import com.newgaea.openEnd.reflection.ReflectClass;
@@ -210,11 +211,14 @@ public class OpenEndMod {
 	
 	
 	public static Item testSchematicPlacer;
-	public static Item EndSlabItem;
+	public static Item crystalSpawner;
 	public void InitItems()
 	{
 		testSchematicPlacer=new ItemSchematicPlacer(Configs.schematicPlacer).setCreativeTab(tabOpenEndItems).setUnlocalizedName("schematicPlacer");
 		GameRegistry.registerItem(testSchematicPlacer, "TestSchematicPlacer");
+		crystalSpawner=new ItemCrystalSpawner(Configs.crystalSpawner).setCreativeTab(tabOpenEndItems).setUnlocalizedName("crystalSpawner");
+		GameRegistry.registerItem(crystalSpawner, "crystalSpawner");
+		LanguageRegistry.addName(crystalSpawner, "Crystal Spawner");
 		
 		
 	}

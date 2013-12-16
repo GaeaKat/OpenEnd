@@ -87,7 +87,7 @@ public class ComponentEndVillageSpire extends ComponentEndVillage {
         //par1World.setBlock(par3StructureBoundingBox.maxX, par3StructureBoundingBox.maxY + l, par3StructureBoundingBox.maxZ, Block.bedrock.blockID, 0, 2);
         this.placeBlockAtCurrentPosition(par1World,Block.bedrock.blockID,0,0,l,0,par3StructureBoundingBox);
         
-		MakeHemiSphere(350, par1World, par3StructureBoundingBox, 0, 0, 0, Block.whiteStone.blockID, 0);
+		MakeHemiSphere(50, par1World, par3StructureBoundingBox, 0, 2, 0, Block.whiteStone.blockID, 0);
 		return true;
 		
 	}
@@ -132,12 +132,14 @@ public class ComponentEndVillageSpire extends ComponentEndVillage {
 
 		                    
 
-		                    
-		                    this.placeBlockAtCurrentPosition(world,blockId,blockData,xPos+x,yPos+(-y),zPos+z,boundingBox);
-		                    
-		                    this.placeBlockAtCurrentPosition(world,blockId,blockData,xPos+(-x),yPos+(-y),zPos+(z),boundingBox);
-		                    this.placeBlockAtCurrentPosition(world,blockId,blockData,xPos+(x),yPos+(-y),zPos+(-z),boundingBox);
-		                    this.placeBlockAtCurrentPosition(world,blockId,blockData,xPos+(-x),yPos+(-y),zPos+(-z),boundingBox);
+		                    world.setBlock(this.getXWithOffset(xPos +(x),zPos+(z)), this.getYWithOffset(yPos+(-y)), this.getZWithOffset(xPos +(x),zPos+(z)), blockId, blockData, 2);
+		                    //this.placeBlockAtCurrentPosition(,blockId,blockData,xPos+x,yPos+(-y),zPos+z,boundingBox);
+		                    world.setBlock(this.getXWithOffset(xPos +(-x),zPos+(z)), this.getYWithOffset(yPos+(-y)), this.getZWithOffset(-xPos +(x),zPos+(z)), blockId, blockData, 2);
+		                    //this.placeBlockAtCurrentPosition(world,blockId,blockData,xPos+(-x),yPos+(-y),zPos+(z),boundingBox);
+		                    world.setBlock(this.getXWithOffset(xPos +(x),zPos+(-z)), this.getYWithOffset(yPos+(-y)), this.getZWithOffset(xPos +(x),zPos+(-z)), blockId, blockData, 2);
+		                    //this.placeBlockAtCurrentPosition(world,blockId,blockData,xPos+(x),yPos+(-y),zPos+(-z),boundingBox);
+		                    world.setBlock(this.getXWithOffset(xPos +(-x),zPos+(-z)), this.getYWithOffset(yPos+(-y)), this.getZWithOffset(xPos +(-x),zPos+(-z)), blockId, blockData, 2);
+		                    //this.placeBlockAtCurrentPosition(world,blockId,blockData,xPos+(-x),yPos+(-y),zPos+(-z),boundingBox);
 		                }
 		            }
 		        }
