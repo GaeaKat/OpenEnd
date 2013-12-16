@@ -66,6 +66,7 @@ public class ItemCrystalSpawner extends Item {
 	        			par3World.spawnEntityInWorld(entityendercrystal);
 	        			checkSummoning(par3World, par4, par5, par6);
 	                }
+	        		return true;
 	        	}
 	        }
 	        
@@ -77,33 +78,35 @@ public class ItemCrystalSpawner extends Item {
 			
 			int xCorner=-1;
 			int zCorner=-1;
-			
+			int direction=-1;
 			// Long way round I know, there is probably better but is only 20 blocks
 			// x +5 z+ 5
 			
 			boolean blocks;
 			boolean fin=false;;
+			boolean allBlocks=false;
 			for(int i=0;i<4;i++)
 			{
 				if(checkArea(world, x, y, z, i))
 				{
+					direction=i;;
 					switch(i)
 					{
 					case 0:
-						xCorner=x+5;
-						zCorner=z+5;
+						xCorner=x+4;
+						zCorner=z+4;
 						break;
 					case 1:
-						xCorner=x+5;
-						zCorner=z-5;
+						xCorner=x+4;
+						zCorner=z-4;
 						break;
 					case 2:
-						xCorner=x-5;
-						zCorner=z+5;
+						xCorner=x-4;
+						zCorner=z+4;
 						break;
 					case 3:
-						xCorner=x-5;
-						zCorner=z-5;
+						xCorner=x-4;
+						zCorner=z-4;
 						break;
 					}
 					fin=true;
@@ -115,6 +118,37 @@ public class ItemCrystalSpawner extends Item {
 			{
 				OpenEndMod.logger.info(Integer.toString(xCorner));
 				OpenEndMod.logger.info(Integer.toString(zCorner));
+				OpenEndMod.logger.info(Integer.toString(world.getBlockId(xCorner, y-2, zCorner)));
+				OpenEndMod.logger.info(Integer.toString(world.getBlockId(xCorner, y-1, zCorner)));
+				
+				switch(direction)
+				{
+				case 0:
+					if(world.getBlockId(xCorner, y-1, zCorner)==Block.obsidian.blockID && world.getBlockId(xCorner-4, y-1, zCorner)==Block.obsidian.blockID && world.getBlockId(xCorner, y-1, zCorner-4)==Block.obsidian.blockID)
+					{
+						allBlocks=true;
+					}
+					break;
+				case 1:
+					if(world.getBlockId(xCorner, y-1, zCorner)==Block.obsidian.blockID && world.getBlockId(xCorner-4, y-1, zCorner)==Block.obsidian.blockID && world.getBlockId(xCorner, y-1, zCorner-4)==Block.obsidian.blockID)
+					{
+						allBlocks=true;
+					}
+					break;
+				case 2:
+					if(world.getBlockId(xCorner, y-1, zCorner)==Block.obsidian.blockID && world.getBlockId(xCorner-4, y-1, zCorner)==Block.obsidian.blockID && world.getBlockId(xCorner, y-1, zCorner-4)==Block.obsidian.blockID)
+					{
+						allBlocks=true;
+					}
+					break;
+				case 3:
+					if(world.getBlockId(xCorner, y-1, zCorner)==Block.obsidian.blockID && world.getBlockId(xCorner-4, y-1, zCorner)==Block.obsidian.blockID && world.getBlockId(xCorner, y-1, zCorner-4)==Block.obsidian.blockID)
+					{
+						allBlocks=true;
+					}
+					break;
+					
+				}
 			}
 		}
 
