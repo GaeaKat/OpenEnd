@@ -1,5 +1,7 @@
 package com.newgaea.openEnd.items;
 
+import com.newgaea.openEnd.OpenEndMod;
+
 import net.minecraft.block.Block;
 import net.minecraft.entity.item.EntityEnderCrystal;
 import net.minecraft.entity.player.EntityPlayer;
@@ -62,6 +64,7 @@ public class ItemCrystalSpawner extends Item {
 	        			EntityEnderCrystal entityendercrystal = new EntityEnderCrystal(par3World);
 	        			entityendercrystal.setLocationAndAngles((double)((float)par4 + 0.5F), (double)(par5 - 1f), (double)((float)par6 + 0.5F), (float) (0.5 * 360.0F), 0.0F);
 	        			par3World.spawnEntityInWorld(entityendercrystal);
+	        			checkSummoning(par3World, par4, par5, par6);
 	                }
 	        	}
 	        }
@@ -80,35 +83,6 @@ public class ItemCrystalSpawner extends Item {
 			
 			boolean blocks;
 			boolean fin=false;;
-			
-
-			blocks=checkArea(world, x, y, z, 0);
-			if(blocks)
-			{
-				xCorner=x+5;
-				zCorner=z+5;
-				fin=true;
-			}
-			blocks=checkArea(world, x, y, z, 1);
-			if(blocks)
-			{
-				xCorner=x+5;
-				zCorner=z+5;
-				fin=true;
-			}
-			blocks=checkArea(world, x, y, z, 2);
-			if(blocks)
-			{
-				xCorner=x+5;
-				zCorner=z+5;
-				fin=true;
-			}
-			blocks=checkArea(world, x, y, z, 3);
-			if(blocks)
-			{
-				xCorner=x+5;
-				zCorner=z+5;
-			}
 			for(int i=0;i<4;i++)
 			{
 				if(checkArea(world, x, y, z, i))
@@ -132,7 +106,15 @@ public class ItemCrystalSpawner extends Item {
 						zCorner=z-5;
 						break;
 					}
+					fin=true;
+					break;
 				}
+			}
+			
+			if(fin)
+			{
+				OpenEndMod.logger.info(Integer.toString(xCorner));
+				OpenEndMod.logger.info(Integer.toString(zCorner));
 			}
 		}
 
