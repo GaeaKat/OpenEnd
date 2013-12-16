@@ -200,7 +200,7 @@ public abstract class ComponentEndVillage extends StructureComponent
 
             if (par1 == Block.gravel.blockID)
             {
-                return Block.sandStone.blockID;
+                return Configs.SmoothEndStoneId;
             }
 
         return par1;
