@@ -1,12 +1,18 @@
 package com.newgaea.openEnd.items;
 
+import java.util.List;
+
 import com.newgaea.openEnd.OpenEndMod;
 
 import net.minecraft.block.Block;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.boss.EntityDragon;
 import net.minecraft.entity.item.EntityEnderCrystal;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.AABBPool;
+import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.World;
 
 public class ItemCrystalSpawner extends Item {
@@ -116,11 +122,6 @@ public class ItemCrystalSpawner extends Item {
 			
 			if(fin)
 			{
-				OpenEndMod.logger.info(Integer.toString(xCorner));
-				OpenEndMod.logger.info(Integer.toString(zCorner));
-				OpenEndMod.logger.info(Integer.toString(world.getBlockId(xCorner, y-2, zCorner)));
-				OpenEndMod.logger.info(Integer.toString(world.getBlockId(xCorner, y-1, zCorner)));
-				OpenEndMod.logger.info(Integer.toString(direction));
 				switch(direction)
 				{
 				case 0:
@@ -149,7 +150,20 @@ public class ItemCrystalSpawner extends Item {
 					break;
 					
 				}
-				OpenEndMod.logger.info(Boolean.toString(allBlocks));
+				AxisAlignedBB box=AxisAlignedBB.getAABBPool().getAABB(x, y-1, z, xCorner, y+1, z).expand(4, 4, 4);
+				List<Entity> entities=world.getEntitiesWithinAABB(EntityEnderCrystal.class, box);
+				
+				if(entities.size()==4)
+				{
+					EntityDragon entitydragon = new EntityDragon(world);
+		            entitydragon.setLocationAndAngles(x, 128.0D, z, 1 * 360.0F, 0.0F);
+		            world.spawnEntityInWorld(entitydragon);
+		            for(Entity ent:entities)
+		            {
+		            	ent.setDead();
+		            }
+		            
+				}
 			}
 		}
 
