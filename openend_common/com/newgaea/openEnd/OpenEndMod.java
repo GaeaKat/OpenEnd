@@ -10,6 +10,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraftforge.common.ChestGenHooks;
 import net.minecraftforge.common.Configuration;
 import net.minecraftforge.common.MinecraftForge;
@@ -25,6 +26,8 @@ import com.newgaea.openEnd.Blocks.ScorchedLogBlock;
 import com.newgaea.openEnd.Blocks.ScorchedWoodBlock;
 import com.newgaea.openEnd.Blocks.SmoothDarkEndStoneBlock;
 import com.newgaea.openEnd.Blocks.SmoothEndStoneBlock;
+import com.newgaea.openEnd.gen.EndVillageGenner;
+import com.newgaea.openEnd.gen.structure.ComponentEndVillageHouse2;
 import com.newgaea.openEnd.gen.structure.EndWorldGenHandler;
 import com.newgaea.openEnd.items.ItemCrystalSpawner;
 import com.newgaea.openEnd.items.ItemSchematicPlacer;
@@ -215,7 +218,7 @@ public class OpenEndMod {
 	public static Item crystalSpawner;
 	public void InitItems()
 	{
-		testSchematicPlacer=new ItemSchematicPlacer(Configs.schematicPlacer).setCreativeTab(tabOpenEndItems).setUnlocalizedName("schematicPlacer");
+		testSchematicPlacer=new ItemSchematicPlacer(Configs.schematicPlacer).setCreativeTab(tabOpenEndItems).setUnlocalizedName("schematicPlacer").setTextureName("openend:alter_spawner");
 		GameRegistry.registerItem(testSchematicPlacer, "TestSchematicPlacer");
 		LanguageRegistry.addName(testSchematicPlacer, "Alter Spawner");
 		crystalSpawner=new ItemCrystalSpawner(Configs.crystalSpawner).setCreativeTab(tabOpenEndItems).setUnlocalizedName("crystalSpawner").setTextureName("openend:ender_crystal");
@@ -237,8 +240,9 @@ public class OpenEndMod {
 		InitItems();
 		
 		MinecraftForge.EVENT_BUS.register(new EndWorldGenHandler());
-		ReflectClass reflect=new ReflectClass();
-		reflect.reflectme();
+		EndVillage=new ChestGenHooks("EndVillage", ComponentEndVillageHouse2.villageBlacksmithChestContents, 3, 9);
+		EndChurch=new ChestGenHooks("EndChurch", ComponentEndVillageHouse2.villageBlacksmithChestContents, 3, 9);
+		EndDarkChurch=new ChestGenHooks("EndDarkChurch", ComponentEndVillageHouse2.villageBlacksmithChestContents, 3, 9);
 	}	
 	
 	@EventHandler

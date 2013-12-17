@@ -2,6 +2,9 @@ package com.newgaea.openEnd.gen.structure;
 
 import java.util.List;
 import java.util.Random;
+
+import com.newgaea.openEnd.OpenEndMod;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.nbt.NBTTagCompound;
@@ -111,7 +114,7 @@ public class ComponentEndVillageHouse2 extends ComponentEndVillage
             if (par3StructureBoundingBox.isVecInside(j, i, k))
             {
                 this.hasMadeChest = true;
-                this.generateStructureChestContents(par1World, par3StructureBoundingBox, par2Random, 5, 1, 5, ChestGenHooks.getItems(VILLAGE_BLACKSMITH, par2Random), ChestGenHooks.getCount(VILLAGE_BLACKSMITH, par2Random));
+                this.generateStructureChestContents(par1World, par3StructureBoundingBox, par2Random, 5, 1, 5, OpenEndMod.EndVillage.getItems(par2Random), OpenEndMod.EndVillage.getCount(par2Random));
             }
         }
 
