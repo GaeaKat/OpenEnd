@@ -1,0 +1,16 @@
+﻿Lore Sources
+
+Dungeon/Stronghold:
+	ANCIENT LORE 01 - 04
+	ANCIENT LORE 06 - 12
+
+Stronghold:
+	ELYSIAN LORE 07 - 09
+
+End Villages:
+	ANCIENT LORE 05
+	ELYSIAN LORE 01 - 07
+	ENDER LORE 01 - 09
+	
+Any Source:
+	MODERN LORE 01
