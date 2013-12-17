@@ -1,4 +1,5 @@
-﻿Blessing
+﻿
+Blessing
 Ancient Chronicler
 ENDVILLAGE
 

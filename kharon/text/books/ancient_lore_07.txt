@@ -1,4 +1,5 @@
-﻿STRONGHOLD
+﻿
+Stronghold
 Ancient Chronicler
 STRONGHOLD, ENDVILLAGE
 

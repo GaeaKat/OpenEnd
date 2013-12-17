@@ -1,4 +1,5 @@
-﻿Missing Gate
+﻿
+Missing Gate
 Ancient Chronicler
 STRONGHOLD,DUNGEON
 

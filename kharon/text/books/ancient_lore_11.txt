@@ -1,4 +1,7 @@
-﻿PORTAL II
+﻿
+Portal II
+Ancient Chronicler
+STRONGHOLD,DUNGEON
 
 The giants have come to trust us greatly. They have agreed that we may form settlements within Elysium, and taught us how to open the gate.
 
