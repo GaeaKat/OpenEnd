@@ -3,10 +3,12 @@ Portal II
 Ancient Chronicler
 STRONGHOLD,DUNGEON
 
-The giants have come to trust us greatly. They have agreed that we may form settlements within Elysium, and taught us how to open the gate.
-
-The third eye is the source of the spiritual powers of Elysians. When they die, the third eye retains its power, and when forged in intense fire it creates a crystal that can contribute to opening the gate. By some amazing coincidence, it takes twelve of these Third Eye Crystals to open a gate.
-
-These crystals will retain their power for a lifetime, or so the mystics claim. So with the help of the giants, who saw no other good in their dead kin, we have now the opportunity to keep an open gate to Elysium at all times.
-
-I know my time is nearly up... My last compatriot has died and been brought back by a team of miners. Tomorrow, I will leave the stronghold so I may die under the open sky, for... However long I have left, I have grown to miss the sunlight, and wish to live in it for the rest of my days.
+The giants have come to trust us greatly. They have agreed that we may form settlements within Elysium, and taught us how to open the gate.^The third eye is the source of the spiritual powers of Elysians. When they die, the
+-->>
+third eye retains its power, and when forged in intense fire it creates a crystal that can contribute to opening the gate. By some amazing coincidence, it takes twelve of these Third Eye Crystals to open a gate.^These crystals will retain
+-->>
+their power for a lifetime, or so the mystics claim. So with the help of the giants, who saw no other good in their dead kin, we have now the opportunity to keep an open gate to Elysium at all times.
+-->>
+I feel my time is nearly up... My last compatriot has died and been brought back by a team of miners. Tomorrow, I will leave the stronghold so I may die under the open sky, for... However long I have left, I have grown to miss the sunlight
+-->>
+I wish to live in sunlight for the rest of my days.
