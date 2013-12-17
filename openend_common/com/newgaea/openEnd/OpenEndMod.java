@@ -10,6 +10,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.ChestGenHooks;
 import net.minecraftforge.common.Configuration;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.oredict.OreDictionary;
@@ -223,6 +224,10 @@ public class OpenEndMod {
 		
 		
 	}
+	
+	public static ChestGenHooks EndVillage;
+	public static ChestGenHooks EndChurch;
+	public static ChestGenHooks EndDarkChurch;
 	@EventHandler
 	public void Init(FMLInitializationEvent event)
 	{
