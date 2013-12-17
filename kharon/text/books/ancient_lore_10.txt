@@ -1,7 +1,10 @@
-﻿PORTAL I
+﻿
+Portal
+Ancient Chronicler
+STRONGHOLD,DUNGEON
 
-It turns out that the giants are as mortal as us. The more they visit our world, the shorter their lives become. Somehow, I hold the blessing of the pillars, though. Two generations have passed since I left Elysium for the last time, and though I feel old, I am not aging outwardly.
-
-Our masons and mystics have experimented and found the ideal casing for the gate. The ideal door-frame. By lining a block of Elysian Whitestone with emeralds, it contributes greatly to the stability of the gate. Twelve such blocks provide the optimal level of stability.
-
-However, this only makes the gate stable. We still need the power of a giant to open the gate...
+It turns out that the giants are as mortal as us. The more they visit our world, the shorter their lives become. Somehow, I hold the blessing of the pillars, though. Two generations have passed since I left Elysium for the last time.
+-->>
+Though I feel old, I am not aging outwardly.^Our masons and mystics have experimented and found the ideal casing for the gate. The ideal door-frame. By lining a block of Elysian Whitestone with emeralds, it contributes greatly to the
+-->>
+stability of the gate. Twelve such blocks provide the optimal level of stability.^However, this only makes the gate stable. We still need the power of a giant to open the gate...

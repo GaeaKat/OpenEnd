@@ -1,11 +1,14 @@
-﻿STRONGHOLD II
+﻿
+Stronghold II
+Ancient Chronicler
+STRONGHOLD,DUNGEON
 
-Our numbers are shrinking. Now only two of us remain. We have taken the latest of our dead back to the world of his birth. Our people have secured much more than merely the gate. They now have a stronghold in the heart of the underworld. In the lifetimes we have spent in Elysium, they have advanced beyond our knowledge.
-
-The route from their stronghold to the surface is safe, and as we laid our partner to rest under the stars of our birth world, I felt a pang of regret.
-
-I have lived an easy life. Time has little meaning to me, but the short lives of my brethren has allowed them to create amazing structures. They have created prisons to hold in the nests of monsters in their world. They have fought the darkness to the point they no longer fear it.
-
-And yet I, though I have lived longer than any of them, have had only my mind to work. Yet, with no challenges to overcome, I fear I have grown complacent. I will now ask my partner to return home without me, for...
-
-In truth, mortal men are not suited to immortal lives.
+Our numbers are shrinking. Now only two of us remain. We have taken the last of our dead back to the world of his birth. Our people have secured much more than just the gate. They now have a stronghold in the heart of the underworld. In the
+-->>
+lifetimes we have spent in Elysium, they have advanced beyond our knowing.^The route from this stronghold to the surface is safe, and as we laid our partner to rest under the stars of our birth world, I felt a pang of
+-->>
+regret.^I have lived an easy life. Time has little meaning to me, but the short lives of my brethren have allowed them to create amazing structures. They have created prisons to hold in the nests of
+-->>
+monsters in their world. They have fought the darkness to the point they no longer fear it.^And yet I, though I have lived longer than any of them, have had only my mind to work. Yet, with no challenges
+-->>
+to overcome, I fear I have grown lazy.^I will ask my partner to return home without me, for... I feel that, mortal men are not suited to immortal lives.

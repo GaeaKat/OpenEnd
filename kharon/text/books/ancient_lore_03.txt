@@ -1,31 +1,8 @@
-﻿Missing Gate
+﻿
+Missing Gate
 Ancient Chronicler
 STRONGHOLD,DUNGEON
 
-By a miracle, we
-found our way to
-the cavern of the
-gate. Carved into
-the stone walls
-were messages that
-promised us that
-this is the place.
-
-Yet the gate is
-gone!
-
-So too is our food.
+By a miracle, we found our way to the cavern of the gate. Carved into the stone walls were messages that promised us that this is the place.^Yet the gate is gone!^So too is our food.
 -->>
-We may starve here.
-I have proposed we
-wait a day, then
-turn back. If we
-become desparate,
-we...
-
-No, I will not hold
-that thought. The
-gate is here, and I
-will die waiting to
-go through it
-before I turn back.
+We may starve here. I have proposed we wait a day, then turn back. If we become desparate, we...^No, I will not hold that thought. The gate is here, and I will die waiting to go through it before I turn back.

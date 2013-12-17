@@ -1,28 +1,8 @@
-﻿Underworld
+﻿
+Underworld
 Ancient Chronicler
 STRONGHOLD,DUNGEON
 
-The underworld is
-a dangerous place.
-We have prepared as
-many torches as we
-could, and still
-the trek is treach-
-erous. A great
-chasm opened before
-us at one point,
-and we scaled the
-walls to the floor,
-as the stories told
-us was the way.
+The underworld is a dangerous place. We have prepared as many torches as we could, and still the trek is treacherous. A great chasm opened before us at one point, and we scaled the walls to the floor, as the stories told us was the way.
 -->>
-However we are now
-lost. The mining
-tunnels are a maze
-for those of us who
-are scholars, not
-miners or soldiers.
-
-I pray we will find
-our way before our
-food is exhausted.
+However we are now lost. The mining tunnels are a maze for those of us who are scholars, not miners or soldiers.^I pray we will find our way before our food is exhausted.
