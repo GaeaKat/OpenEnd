@@ -86,6 +86,7 @@ public class BookManager {
 		}
 		nbt.setTag("pages", list);
 		book.setTagCompound(nbt);
+		
 		for(String place:spawnlist)
 		{
 			if(place.equalsIgnoreCase("STRONGHOLD"))

@@ -85,6 +85,14 @@ public class OpenEndMod {
 			return new ItemStack(Item.enderPearl);
 		}
 	};
+	//public static CreativeTabs tabOpenEndLore=new CreativeTabs("tabOpenEndLore")
+	//{
+	//	@Override
+	//	public ItemStack getIconItemStack()
+	//	{
+	//		return new ItemStack(Item.writtenBook);
+	//	}
+	//};
 	public static Block DEndStone;
 	public static Block EndBricks;
 	public static Block DEndBricks;
@@ -239,6 +247,7 @@ public class OpenEndMod {
 		LanguageRegistry.instance().addStringLocalization("itemGroup.tabOpenEndBlocks", "en_US","Open End Blocks");
 		InitBlocks();
 		LanguageRegistry.instance().addStringLocalization("itemGroup.tabOpenEndItems", "en_US","Open End Items");
+		LanguageRegistry.instance().addStringLocalization("itemGroup.tabOpenEndLore", "en_US","Open End Lore");
 		InitItems();
 		
 		MinecraftForge.EVENT_BUS.register(new EndWorldGenHandler());
