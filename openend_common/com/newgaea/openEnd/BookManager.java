@@ -86,7 +86,6 @@ public class BookManager {
 		}
 		nbt.setTag("pages", list);
 		book.setTagCompound(nbt);
-		OpenEndMod.EndVillage.addItem(new WeightedRandomChestContent(book, 1, 99, 99));
 		for(String place:spawnlist)
 		{
 			if(place.equalsIgnoreCase("STRONGHOLD"))
