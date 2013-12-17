@@ -15,6 +15,8 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.nbt.NBTTagString;
 import net.minecraft.util.WeightedRandomChestContent;
+import net.minecraftforge.common.ChestGenHooks;
+import net.minecraftforge.common.DungeonHooks;
 
 import com.newgaea.openEnd.lib.Reference;
 
@@ -83,7 +85,49 @@ public class BookManager {
 		}
 		nbt.setTag("pages", list);
 		book.setTagCompound(nbt);
-		OpenEndMod.EndVillage.addItem(new WeightedRandomChestContent(book, 99, 99, 99));
+		for(String place:spawnlist)
+		{
+			if(place.equalsIgnoreCase("STRONGHOLD"))
+			{
+				ChestGenHooks.addItem(ChestGenHooks.STRONGHOLD_CORRIDOR, new WeightedRandomChestContent(book, 1, 1, Configs.bookChance));
+				ChestGenHooks.addItem(ChestGenHooks.STRONGHOLD_CROSSING, new WeightedRandomChestContent(book, 1, 1, Configs.bookChance));
+				ChestGenHooks.addItem(ChestGenHooks.STRONGHOLD_LIBRARY, new WeightedRandomChestContent(book, 1, 1, Configs.bookChance));
+			}
+			if(place.equalsIgnoreCase(("DUNGEON")))
+			{
+				ChestGenHooks.addItem(ChestGenHooks.DUNGEON_CHEST, new WeightedRandomChestContent(book, 1, 1, Configs.bookChance));
+			}
+			if(place.equalsIgnoreCase(("ENDVILLAGE")))
+			{
+				OpenEndMod.EndVillage.addItem(new WeightedRandomChestContent(book, 1, 1, Configs.bookChance));
+			}
+			if(place.equalsIgnoreCase(("ENDVILLAGECHURCH")))
+			{
+				OpenEndMod.EndChurch.addItem(new WeightedRandomChestContent(book, 1, 1, Configs.bookChance));
+			}
+			if(place.equalsIgnoreCase(("ENDVILLAGEDARKCHURCH")))
+			{
+				OpenEndMod.EndDarkChurch.addItem(new WeightedRandomChestContent(book, 1, 1, Configs.bookChance));
+			}
+			if(place.equalsIgnoreCase(("ALL")))
+			{
+				WeightedRandomChestContent content=new WeightedRandomChestContent(book, 1, 1, Configs.bookChance);
+				ChestGenHooks.addItem(ChestGenHooks.STRONGHOLD_CORRIDOR, content);
+				ChestGenHooks.addItem(ChestGenHooks.STRONGHOLD_CROSSING, content);
+				ChestGenHooks.addItem(ChestGenHooks.STRONGHOLD_LIBRARY, content);
+				ChestGenHooks.addItem(ChestGenHooks.DUNGEON_CHEST, content);
+				ChestGenHooks.addItem(ChestGenHooks.BONUS_CHEST, content);
+				ChestGenHooks.addItem(ChestGenHooks.MINESHAFT_CORRIDOR, content);
+				ChestGenHooks.addItem(ChestGenHooks.PYRAMID_DESERT_CHEST, content);
+				ChestGenHooks.addItem(ChestGenHooks.PYRAMID_JUNGLE_CHEST, content);
+				ChestGenHooks.addItem(ChestGenHooks.PYRAMID_JUNGLE_DISPENSER, content);
+				ChestGenHooks.addItem(ChestGenHooks.VILLAGE_BLACKSMITH, content);
+				OpenEndMod.EndChurch.addItem(content);
+				OpenEndMod.EndVillage.addItem(content);
+				OpenEndMod.EndDarkChurch.addItem(content);
+			}
+		}
+		
 		
 	}
 
