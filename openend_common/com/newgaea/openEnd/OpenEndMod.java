@@ -118,6 +118,7 @@ public class OpenEndMod {
 		LanguageRegistry.instance().addStringLocalization("tile.endbrick.chiseled.name","en_US", "Chisled Endstone Brick");
 		MinecraftForge.setBlockHarvestLevel(EndBricks, "pick", 0);
 		
+		
 		DEndBricks=new DEndBrickBlock(Configs.DarkEndBrickId, Material.rock).setHardness(1.5F).setResistance(10.0F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName("darkendbrick").setCreativeTab(tabOpenEndBlocks).setTextureName("openend:dark_end_stone_brick");
 		GameRegistry.registerBlock(DEndBricks, ItemMultiDBrickBlock.class,"DarkEndBricks");
 		LanguageRegistry.instance().addStringLocalization("tile.darkendbrick.default.name","en_US", "Smooth Dark Endstone Brick");
@@ -208,7 +209,8 @@ public class OpenEndMod {
 		LanguageRegistry.addName(EndSlab, "End Slab");
 		MinecraftForge.setBlockHarvestLevel(EndSlab, "pick", 0);
 		GameRegistry.addShapedRecipe(new ItemStack(EndSlab,6), "xxx",'x',new ItemStack(SmoothEndStone));
-		
+		GameRegistry.addShapedRecipe(new ItemStack(EndBricks), "xx","xx",'x',new ItemStack(SmoothEndStone));
+		GameRegistry.addShapedRecipe(new ItemStack(DEndBricks), "xx","xx",'x',new ItemStack(SmoothDarkEndStone));
 		
 	}
 	
@@ -244,6 +246,8 @@ public class OpenEndMod {
 		EndChurch=new ChestGenHooks("EndChurch", ComponentEndVillageHouse2.villageBlacksmithChestContents, 3, 9);
 		EndDarkChurch=new ChestGenHooks("EndDarkChurch", ComponentEndVillageHouse2.villageBlacksmithChestContents, 3, 9);
 		BookManager.Load();
+		
+		GameRegistry.registerWorldGenerator(new EndVillageGenner());
 	}	
 	
 	@EventHandler

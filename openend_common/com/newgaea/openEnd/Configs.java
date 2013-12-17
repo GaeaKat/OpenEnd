@@ -55,6 +55,7 @@ public class Configs {
 	public static @CfgInteger(comment="X postion of test village in End") int villageXPos=-176;
 	public static @CfgInteger(comment="Z postion of test village in End") int villageZPos=176;
 	public static @CfgInteger(comment="Chance of Lore books") int bookChance=10;
+	public static @CfgInteger(comment="Density of Dark end stone") int oreDensity=10;
 	
 	public static void load(Configuration config)
 	{
