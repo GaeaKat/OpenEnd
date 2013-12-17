@@ -59,7 +59,7 @@ public class ItemSchematicPlacer extends Item {
         if (i1 == 0) {
         	par3World.playSoundEffect(par4 + 0.5D, par5 + 0.5D, par6 + 0.5D,
                     "fire.ignite", 1.0F, itemRand.nextFloat() * 0.4F + 0.8F);
-        	Schematic schem=SchematicManager.loadSchematic("darkAlter", par3World);
+        	Schematic schem=SchematicManager.loadSchematic("alter", par3World);
         	SchematicManager.PlaceSchematic(schem, par3World, par4, par5, par6);
         }
         par1ItemStack.damageItem(1, par2EntityPlayer);

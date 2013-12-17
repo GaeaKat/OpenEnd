@@ -216,7 +216,8 @@ public class OpenEndMod {
 	{
 		testSchematicPlacer=new ItemSchematicPlacer(Configs.schematicPlacer).setCreativeTab(tabOpenEndItems).setUnlocalizedName("schematicPlacer");
 		GameRegistry.registerItem(testSchematicPlacer, "TestSchematicPlacer");
-		crystalSpawner=new ItemCrystalSpawner(Configs.crystalSpawner).setCreativeTab(tabOpenEndItems).setUnlocalizedName("crystalSpawner");
+		LanguageRegistry.addName(testSchematicPlacer, "Alter Spawner");
+		crystalSpawner=new ItemCrystalSpawner(Configs.crystalSpawner).setCreativeTab(tabOpenEndItems).setUnlocalizedName("crystalSpawner").setTextureName("openend:ender_crystal");
 		GameRegistry.registerItem(crystalSpawner, "crystalSpawner");
 		LanguageRegistry.addName(crystalSpawner, "Crystal Spawner");
 		
