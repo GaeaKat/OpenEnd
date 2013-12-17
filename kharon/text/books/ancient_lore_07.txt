@@ -1,8 +1,47 @@
 ﻿STRONGHOLD
 Ancient Chronicler
+STRONGHOLD, ENDVILLAGE
 
-The people had developed significant wisdom and knowledge in our absence. They now grew more crops, and fenced in the wild animals. they had even learned how to return stone to its natural state after breaking it from the earth!
+The people have 
+gained much wisdom
+and knowledge in
+our absence. They
+now grow more crops
+and have fenced in
+some wild animals.
+They have even
+learned how to 
+transmute stone to
+its natural state
+after breaking it
+-->>
+from the earth!
 
-With this knowledge, and the guarantee that our lives had been prolonged rather than cut short, the people sent an envoy with us. Three masons and two engineers would secure the room with the gate. With this room, we could return and know the dead and the monsters were no longer a threat to us.
+With this knowledge
+and the guarantee
+that our lives have
+been prolonged, not
+cut short, our
+people sent a small
+envoy with us. Four
+masons and two eng-
+ineers would secure
+the room with the
+gate.
+-->>
+With this room sec-
+ure, we can return
+and know the dead,
+and the monsters,
+are no longer a
+threat to us.
 
-The masons had already begun their work with furnaces when the giant came to bring us home -- for Elysium is now our home.
+The masons have al-
+ready begun their
+work, with stone
+furnaces, when the
+giant came to bring
+us home -- for
+-->>
+Elysium is now our
+home.
