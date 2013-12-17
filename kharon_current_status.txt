@@ -58,3 +58,6 @@
 	17:05 - Home and ready to write!
 	17:20 - Tested the dragon summon process and killed a second ender dragon
 	
+	18:05 - Wow! I didn't expect the lore would quite end up there, but it provides a nice tie between vanilla content and our mod -- and if you don't want lore, ignore the books (or turn them off in config, maybe?).
+	
+	20:00 - Didn't mean to leave an unannounced break. Going to make a list of lore sources (where to find) and sequence now.
