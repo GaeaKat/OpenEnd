@@ -79,12 +79,14 @@ public class BookManager {
 				page+=line;
 				line=br.readLine();
 			}	
+			page=page.replace('^', '\n');
 			list.appendTag(new NBTTagString(Integer.toString(i),page));
 			page="";
 			line=br.readLine();
 		}
 		nbt.setTag("pages", list);
 		book.setTagCompound(nbt);
+		OpenEndMod.EndVillage.addItem(new WeightedRandomChestContent(book, 1, 99, 99));
 		for(String place:spawnlist)
 		{
 			if(place.equalsIgnoreCase("STRONGHOLD"))

@@ -248,6 +248,7 @@ public class OpenEndMod {
 		BookManager.Load();
 		
 		GameRegistry.registerWorldGenerator(new EndVillageGenner());
+		ChestGenHooks.addItem(ChestGenHooks.DUNGEON_CHEST, new WeightedRandomChestContent(new ItemStack(crystalSpawner), 1, 1, 15));
 	}	
 	
 	@EventHandler

@@ -3,8 +3,8 @@ Elysium
 Ancient Chronicler
 STRONGHOLD,DUNGEON
 
-The "afterlife" we have dreamed of, been taught of since youth, is but another plane of life. It is a realm of giants and beautiful landscapes. We have found the way there, deep in the earth. A gate lies far below the surface... but the 
+The "afterlife" we have dreamed of, been taught of since youth, is but another plane of life. It is a realm of giants and beautiful landscapes. We have found the way there, deep in the earth. A gate lies far below the surface... but the
 -->>
-road there is most treacherous. The dead rise in the underworld, and green stalkers hide in the caverns. Spiders also attack in the darkness. Yet we continue to pursue this gate, to enter the after-life, to enter
+road there is most treacherous.^The dead rise in the underworld, and green stalkers hide in the caverns. Spiders also attack in the darkness. Yet we continue to pursue this gate, to enter the after life, to enter
 -->>
-paradise before we are taken from this life. Tomorrow we travel into the underworld hoping for paradise.
+paradise before we are taken from this life.^Tomorrow we travel into the underworld hoping for paradise.
