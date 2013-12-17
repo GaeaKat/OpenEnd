@@ -1,0 +1,43 @@
+﻿The Lore Stories progress primarily from the Ancient Lore to
+Elysian Lore and then to Ender Lore -- but Ender Lore isn't
+truly the end of the story. The context of the books should
+make most of the lore clear -- if you read them all.
+
+For reference, the full order, along with place of origin,
+is listed below:
+	AUTHOR				ORIGIN		BOOK NUMBER			BOOK TITLE
+	Ancient Chronicler	Overworld	Ancient Lore 01		Elysium
+	Ancient Chronicler	Overworld	Ancient Lore 02		Underworld
+	Ancient Chronicler	Overworld	Ancient Lore 03		Missing Gate
+	Ancient Chronicler	Overworld	Ancient Lore 04		Gentle Giant
+	Ancient Chronicler	Elysium		Ancient Lore 05		Blessing
+	Ancient Chronicler	Overworld	Ancient Lore 06		Mortality
+	Ancient Chronicler	Overworld	Ancient Lore 07		Stronghold
+	Ancient Chronicler	Overworld	Ancient Lore 08		Stronghold II
+	Ancient Chronicler	Overworld	Ancient Lore 09		Envoys
+	Ancient Chronicler	Overworld	Ancient Lore 10		Portal
+	Ancient Chronicler	Overworld	Ancient Lore 11		Portal II
+	
+	Elysian Colonist	Elysium		Elysian Lore 01		Children
+	Elysian Colonist	Elysium		Elysian Lore 02		Friendship
+	Elysian Colonist	Elysium		Elysian Lore 03		Softness
+	Elysian Colonist	Elysium		Elysian Lore 04		Clay
+	Elysian Colonist	Elysium		Elysian Lore 05		Offspring
+	Elysian Colonist	Elysium		Elysian Lore 06		Ender
+	Elysian Colonist	Elysium		Elysian Lore 07		Gifts
+
+	First Ender			Elysium		Ender Lore 01		Ender Gifts
+	First Ender			Elysium		Ender Lore 02		Great Soul
+	First Ender			Elysium		Ender Lore 03		Black Stone?
+	First Ender			Elysium		Ender Lore 04		Black Glass
+	First Ender			Elysium		Ender Lore 05		Trading
+	First Ender			Elysium		Ender Lore 06		Crystal
+	First Ender			Elysium		Ender Lore 07		Tools
+	First Ender			Elysium		Ender Lore 08		Pillar
+	First Ender			Elysium		Ender Lore 09		Ring of Glass
+	
+	Elysian Colonist	Elysium		Elysian Lore 08		Sundering
+	Elysian Colonist	Elysium		Elysian Lore 09		Refugee
+	Ancient Chronicler	Overworld	Ancient Lore 12		Fall
+
+	Ancient Chronicler	Unknown		Modern Lore 01		STEVE?
