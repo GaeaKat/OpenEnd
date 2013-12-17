@@ -243,6 +243,7 @@ public class OpenEndMod {
 		EndVillage=new ChestGenHooks("EndVillage", ComponentEndVillageHouse2.villageBlacksmithChestContents, 3, 9);
 		EndChurch=new ChestGenHooks("EndChurch", ComponentEndVillageHouse2.villageBlacksmithChestContents, 3, 9);
 		EndDarkChurch=new ChestGenHooks("EndDarkChurch", ComponentEndVillageHouse2.villageBlacksmithChestContents, 3, 9);
+		BookManager.Load();
 	}	
 	
 	@EventHandler
