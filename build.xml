@@ -6,7 +6,7 @@
 
 	<target name="clean">
 		<delete file="${build.dir.development}\forge\mcp\src\minecraft\mcmod.info" />
-		<delete dir="${build.dir.development}\forge\mcp\src\minecraft\com\newgaeamods" />
+		<delete dir="${build.dir.development}\forge\mcp\src\minecraft\com\newgaea" />
 		<delete dir="${build.dir.development}\forge\mcp\reobf\minecraft" />
 	</target>
 
